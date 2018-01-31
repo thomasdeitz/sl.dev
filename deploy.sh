@@ -26,9 +26,6 @@ echo "Compiling new static content for $TARGET_URL"
 harp compile $CURRENT_REPO_SLUG $TARGET || exit 1
 cd $TARGET
 
-echo "Preserving CNAME"
-git checkout CNAME || exit 1
-
 echo "Commit updates"
 git add -A || exit 1
 git commit --allow-empty -m "Compiled content for $CURRENT_COMMIT" || exit 1
