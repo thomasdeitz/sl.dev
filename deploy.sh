@@ -3,7 +3,7 @@
 echo "Starting deployment" 
 echo "Getting deployment target."
 
-TARGET=$STAGING_TARGET
+TARGET=$PROD_TARGET
 
 echo "Getting source harp.js code from $TRAVIS_REPO_SLUG"
 CURRENT_REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | cut -d "/" -f2 )
