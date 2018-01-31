@@ -1,0 +1,14 @@
+div(class="pi" data-target="personal")
+	h5 Personal Insights
+	
+	for insight in leads[0].personal.pro
+		p.personal
+			span.fa.fa-check
+			span= insight
+			
+	hr
+	
+	for insight in leads[0].personal.con
+		p.personal
+			span.fa.fa-close
+			span= insight

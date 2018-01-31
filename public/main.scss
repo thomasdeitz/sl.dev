@@ -1,0 +1,58 @@
+@import '_shared/scss/variables';
+@import '_shared/scss/grid';
+
+@import '_shared/nav.main';
+@import '_shared/marquee';
+@import '_shared/list.tabs';
+@import '_shared/detail.tabs';
+@import '_shared/list.leads';
+@import '_shared/detail.lead';
+@import '_shared/detail.lead.social.personal.expanded';
+
+body{
+  margin: 0;
+  padding: 0;
+  background: map-get($colors, white);
+  color: map-get($colors, black);
+  font: normal normal 300 #{$base-font-size}/1.25 $sans-font-family;
+  overflow:hidden;
+  height:100%;
+  width:100%;
+  position:fixed;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+h1 {
+	font-size: $h1-font-size;
+}
+
+h2 {
+	font-size: $h2-font-size;
+}
+
+h3 {
+	font-size: $h3-font-size;
+}
+
+h4 {
+	font-size: $h4-font-size;
+}
+
+h5 {
+	font-size: $h5-font-size;
+}
+
+h6 {
+	font-size: $h6-font-size;
+}
+
+p {
+	font-size: $base-font-size;
+}
+
+small {
+	font-size: $small-font-size;
+}

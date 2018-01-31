@@ -1,0 +1,45 @@
+section.marquee
+	figure.image(style="background-image:url(#{ marquee_image });")
+	div 
+		h1 Socialeads is the first power-tool for seeing, knowing, connecting and selling to your professional and personal social connections.
+	
+	!= partial("./logo")
+	div
+		div.modal.sso
+			div#sso
+				!= partial("./logo.nm")
+				
+				h2 Sign In
+				
+				ul
+					for account in user.accounts
+						li
+							a(href="./connect")
+								span.fa.fa-address-book-o.fa-lg
+								span= account
+
+			div#connect
+				h2 Get Connected
+				
+				for network in networks
+					input(id="#{ network.icon }" type="radio" name="connetTab" checked=network.checked=="checked" )
+					label(for="#{ network.icon }" style="border-color:#{ network.color }")
+						span(class="fa #{ network.icon }" style="color: #{ network.color }")
+						span= network.label
+				
+				ul.connectTabs
+					for network in networks
+						li.connect
+							br
+							span(class="fa #{ network.icon }" style="color: #{ network.color }")
+							div.connect
+								form
+									input(type="email" placeholder="Username")
+									input(type="password" placeholder="Password")
+									button(style="background-color:#{ network.color }") Connect
+							div.connecting
+								span.spinner(style="border-color: #{ network.color }; border-bottom-color:transparent;")
+								span Connecting...
+							
+							div.connected
+								span Connected

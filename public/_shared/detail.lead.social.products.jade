@@ -1,0 +1,6 @@
+div
+	h5 Product Suggestions
+	
+	for product in leads[0].product_suggestions
+		a(class="product #{ product.split(' ').join('_').toLowerCase() }")
+			span= product

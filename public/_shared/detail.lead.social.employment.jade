@@ -1,0 +1,12 @@
+div
+	h5 Employment History
+	
+	for employer in leads[0].employment
+		div.job
+			figure(style="background-image:url(#{ employer.logo });")
+			div
+				span
+					strong= employer.employer
+				span= employer.title
+				small
+					strong= employer.dates

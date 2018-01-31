@@ -1,0 +1,6 @@
+main#tabs
+	for tab in tabs
+		if tab.url != "/"
+			div(class="tab" tab-cat="#{ tab.url }")
+				!= partial("./list.leads", { url: tab.url })
+				!= partial("./detail.lead", { url: tab.url })

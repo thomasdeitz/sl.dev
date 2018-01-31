@@ -1,0 +1,30 @@
+div.personal-expanded
+	h2 Personal Insights
+		span.fa.fa-times-circle
+	
+	div 
+		div
+			for insight in leads[0].personal.pro
+				p.personal
+					span.fa.fa-check
+					span= insight
+		
+		div
+			for insight in leads[0].personal.con
+				p.personal
+					span.fa.fa-close
+					span= insight
+				
+	div
+		for section in leads[0].personal.sections
+			div.ps
+				h4= section.label
+				
+				for dataPoint in section.data
+					div.dp
+						div.d
+							span= dataPoint.label
+							span #{ dataPoint.value }%
+						div.g
+							div(style="width:#{ dataPoint.value }%")
+				

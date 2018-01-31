@@ -1,0 +1,25 @@
+#tabs {
+	position:fixed;
+	top: $header-height;
+	bottom: 0px;
+	left:200px;
+	right:0px;
+	
+	@media (max-width: 960px) {
+		top:48px;
+		left:0px;
+		position:absolute;
+	}
+	
+	@media (max-width: 768px) {
+		top:48px;
+		left:0px;
+		position:absolute;
+		transition:transform .2s ease-in-out;
+		
+		.lead-detail & {
+			transform: translateX(-100%);
+		}
+		.lead-detail.init-lead-detail & { transform:translateX(0); }
+	}
+}

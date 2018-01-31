@@ -1,0 +1,31 @@
+ul.leadsList
+	for lead in leads
+		if url == 0
+			li(tab-cat="#{ lead.tab }" slug-target="#{ lead.slug }")
+				figure(style="background-image:url(#{ lead.img })")
+				div
+					span.name= lead.name
+					span.title= lead.title
+					
+					for connection in lead.connections 
+						span(class="connection #{connection.name}")
+							span(class="fa fa-#{connection.name}")
+							span= connection.label
+					
+				div
+					span.percent= lead.value
+
+		if lead.tab == url
+			li(tab-cat="#{ lead.tab }" slug-target="#{ lead.slug }")
+				figure(style="background-image:url(#{ lead.img })")
+				div
+					span.name= lead.name
+					span.title= lead.title
+					
+					for connection in lead.connections 
+						span(class="connection #{connection.name}")
+							span(class="fa fa-#{connection.name}")
+							span= connection.label
+					
+				div
+					span.percent= lead.value

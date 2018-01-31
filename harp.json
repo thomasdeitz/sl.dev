@@ -1,0 +1,507 @@
+{
+	"globals": {
+	    "title": "socialeads",
+	    "name" : "Tom Deitz",
+	    "uri": "http://example.com",
+	    "user" : {
+		    "name" : "Matthew",
+		    "accounts" : [
+			    "contact.matt@socialeads.com"
+		    ]
+	    },
+	    "networks": [
+		    {
+			    "label": "Facebook",
+			    "icon": "fa-facebook-square",
+			    "color": "#3b5998",
+			    "checked": "checked"
+		    },
+		    {
+			    "label": "Twitter",
+			    "icon": "fa-twitter-square",
+			    "color": "#1da1f2"
+		    },
+		    {
+			    "label": "LinkedIn",
+			    "icon": "fa-linkedin-square",
+			    "color": "#0077b5"
+		    }
+	    ],
+	    "marquee_image": "https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+	    "tabs": [
+		    {
+			    "icon": "fa fa-users",
+			    "label": "All Leads",
+			    "url": "0",
+			    "value": "11"
+		    },
+
+		    {
+			    "icon": "fa fa-address-book-o",
+			    "label": "Top Prospects",
+			    "url": "1",
+			    "value": "3"
+		    },
+		    {
+			    "icon": "fa fa-share",
+			    "label": "Top Referers",
+			    "url": "2",
+			    "value": "4"
+		    },
+		    {
+			    "icon": "fa fa-comments-o",
+			    "label": "Top Connectors",
+			    "url": "3",
+			    "value": "2"
+		    },
+		    {
+			    "icon": "fa fa-handshake-o",
+			    "label": "Existing Clients",
+			    "url": "4",
+			    "value": "2"
+		    },
+		    {
+			    "icon": "fa fa-refresh",
+			    "label": "Analyze Networks",
+			    "url": "/"
+		    }
+	    ],
+	    "leads": [
+		    {
+			    "tab": "1",
+			    "slug": "cwatson",
+			    "img": "https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Cindy Watson",
+				"title": "Assistant Manager • Acme Co.",
+				"value": "98%",
+				"connections": [
+					{
+					    "name": "facebook-square",
+					    "label": "Friend"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "1st"
+				    },
+				    {
+					    "name": "windows",
+					    "label": "Dynamics"
+				    }
+				],
+				"sa_posts" : [
+					{
+						"timing" : "2 days ago",
+						"post" : "Tech Co. is growing and looking for new canidates in this holiday season. Reach out for more info.",
+						"shares" : "2",
+						"likes" : "5"
+					},
+					{
+						"timing" : "5 days ago",
+						"post" : "Tech Co. stock went up 23% this quarter. Come see what our company is all about!",
+						"shares" : "5",
+						"likes" : "5"
+					},
+					{
+						"timing" : "8 days ago",
+						"post" : "Looking forward to more company growth. #blessed #OnwardAndUpward.",
+						"shares" : "1",
+						"likes" : "5"
+					},
+					{
+						"timing" : "12 days ago",
+						"post" : "Tech Co. is growing and looking for new canidates in this holiday season. Reach out for more info.",
+						"shares" : "2",
+						"likes" : "5"
+					},
+					{
+						"timing" : "15 days ago",
+						"post" : "Tech Co. stock went up 23% this quarter. Come see what our company is all about!",
+						"shares" : "5",
+						"likes" : "5"
+					},
+					{
+						"timing" : "18 days ago",
+						"post" : "Looking forward to more company growth. #blessed #OnwardAndUpward.",
+						"shares" : "1",
+						"likes" : "5"
+					}
+				],
+				"sa_fb_message": "Active 5 min ago.",
+				"sa_tr_message": "Active 2 days ago.",
+				"sa_ln_message": "Not Connected",
+				"sa_ds_message": "Active",
+				"sc": "384",
+				"sc_shared": "92",
+				"st": [
+					{
+						"type": "hashtag",
+						"label": "ChristmasShopping2017",
+						"usage": [
+							"12 times in the last 30 days",
+							"4 times in the last week"
+						],
+						"st_posts" : [
+							{
+								"timing" : "10 hours ago",
+								"post" : "Using my Christmas bonus to buy my boyfriend a gift! #ChristmasShopping2017",
+								"shares" : "35",
+								"likes" : "0"
+							},
+							{
+								"timing" : "12 hours ago",
+								"post" : "At the mall, not sure what to buy! #ChristmasShopping2017",
+								"shares" : "17",
+								"likes" : "0"
+							},
+							{
+								"timing" : "1 day ago",
+								"post" : "Using my Christmas bonus to buy my boyfriend a gift! #ChristmasShopping2017",
+								"shares" : "35",
+								"likes" : "0"
+							},
+							{
+								"timing" : "1 day ago",
+								"post" : "At the mall, not sure what to buy! #ChristmasShopping2017",
+								"shares" : "17",
+								"likes" : "0"
+							},
+							{
+								"timing" : "2 days ago",
+								"post" : "Using my Christmas bonus to buy my boyfriend a gift! #ChristmasShopping2017",
+								"shares" : "35",
+								"likes" : "0"
+							},
+							{
+								"timing" : "2 days ago",
+								"post" : "At the mall, not sure what to buy! #ChristmasShopping2017",
+								"shares" : "17",
+								"likes" : "0"
+							}
+						]
+					},
+					{
+						"type": "hashtag",
+						"label": "Thanksgiving"
+					},
+					{
+						"type": "hashtag",
+						"label": "Yolo"
+					},
+					{
+						"type": "hashtag",
+						"label": "StockMarketWatch"
+					},
+					{
+						"type": "hashtag",
+						"label": "Family"
+					}
+				],
+				"product_suggestions": [
+					"Life Insurance",
+					"Retirement"
+				],
+				"personal": {
+					"pro": [
+						"Likely to treat themselves",
+						"Likely to re-share on social media",
+						"Likely to click on an ad"
+					],
+					"con": [
+						"Unlikely to put health at risk",
+						"Unlikely to take financial risks",
+						"Unlikely to move"
+					],
+					"sections" : [
+						{
+							"label" : "Personality",
+							"data" : [
+								{
+									"label" : "Agreeableness",
+									"value" : "80"
+								},
+								{
+									"label" : "Conscientiousness",
+									"value" : "76"
+								},
+								{
+									"label" : "Emotional Range",
+									"value" : "58"
+								},
+								{
+									"label" : "Openness",
+									"value" : "35"
+								}
+							]
+						},
+						{
+							"label" : "Consumer Needs",
+							"data" : [
+								{
+									"label" : "Challenge",
+									"value" : "95"
+								},
+								{
+									"label" : "Stability",
+									"value" : "100"
+								},
+								{
+									"label" : "Structure",
+									"value" : "93"
+								},
+								{
+									"label" : "Ideal",
+									"value" : "85"
+								},
+								{
+									"label" : "Excitement",
+									"value" : "56"
+								}
+							]
+						},
+						{
+							"label" : "Values",
+							"data" : [
+								{
+									"label" : "Tradition",
+									"value" : "95"
+								},
+								{
+									"label" : "Achievement",
+									"value" : "100"
+								},
+								{
+									"label" : "Pleasure in Life",
+									"value" : "60"
+								},
+								{
+									"label" : "Stimulation",
+									"value" : "85"
+								},
+								{
+									"label" : "Helping Others",
+									"value" : "80"
+								}
+							]
+						}
+					]
+				},
+				"employment": [
+					{
+						"logo": "https://www.gmkfreelogos.com/logos/A/img/Acme-1.gif",
+						"employer": "Acme Corporation",
+						"title": "Assistant Manger",
+						"dates": "May 2015 - Present"	
+					},
+					{
+						"logo": "https://fullhdpictures.com/wp-content/uploads/2016/06/Johnson-Johnson-HD-Logo.png",
+						"employer": "Johnson & Johnson",
+						"title": "Floor Supervisor",
+						"dates": "July 2010 - May 2015"	
+					}
+				]
+		    },
+		    {
+			    "tab": "1",
+			    "slug": "jjohnson",
+			    "img": "https://images.pexels.com/photos/428341/pexels-photo-428341.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Jack Johnson",
+			    "title": "Construction Manager • Acme Constr...",
+			    "value": "89%",
+			    "sc": "200",
+				"sc_shared": "56",
+			    "connections": [
+				    {
+					    "name": "facebook-square",
+					    "label": "Friend"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "1st"
+				    }
+			    ]
+		    },
+		    {
+			    "tab": "1",
+			    "slug": "tfrank",
+			    "img": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Tim Frank",
+				"title": "Web Developer • Acme Software",
+				"value": "64%",
+				"sc": "3,400",
+				"sc_shared": "120",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "2",
+			    "slug": "ajones",
+			    "img": "https://images.pexels.com/photos/355164/pexels-photo-355164.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Abigail Jones",
+				"title": "Dance Instructor • The Piano Company",
+				"value": "98%",
+				"sc": "560",
+				"sc_shared": "1",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "2",
+			    "slug": "lkridliche",
+			    "img": "https://images.pexels.com/photos/655806/pexels-photo-655806.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Lucas Kridliche",
+				"title": "Digital Artist • ALI Creative",
+				"value": "91%",
+				"sc": "1,202",
+				"sc_shared": "102",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "2",
+			    "slug": "idepaue",
+			    "img": "https://images.pexels.com/photos/532739/pexels-photo-532739.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Isaac Deepaue",
+				"title": "Author",
+				"value": "74%",
+				"sc": "433",
+				"sc_shared": "12",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "2",
+			    "slug": "tritter",
+			    "img": "https://images.pexels.com/photos/58020/pexels-photo-58020.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Tracy Ritter",
+				"title": "Registered Nurse • Froedert Medical Center",
+				"value": "64%",
+				"sc": "704",
+				"sc_shared": "200",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "3",
+			    "slug": "sdavidson",
+			    "img": "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Seth Davidson",
+				"title": "Illustrator • Hahn Publishing",
+				"value": "78%",
+				"sc": "432",
+				"sc_shared": "23",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "3",
+			    "slug": "jmosier",
+			    "img": "https://images.pexels.com/photos/672447/pexels-photo-672447.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Jean Mosier",
+				"title": "Personal Banker • Cornerstone Community Bank",
+				"value": "76%",
+				"sc": "78",
+				"sc_shared": "12",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "4",
+			    "slug": "lsmith",
+			    "img": "https://images.pexels.com/photos/713528/pexels-photo-713528.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Laura Smith",
+				"title": "Head Chef • Café Pineapple",
+				"value": "67%",
+				"sc": "560",
+				"sc_shared": "0",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    },
+		    {
+			    "tab": "4",
+			    "slug": "jdiego",
+			    "img": "https://images.pexels.com/photos/249618/pexels-photo-249618.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",
+			    "name": "Juan Diego",
+				"title": "Project Manager • Premium Software Inc",
+				"value": "56%",
+				"sc": "344",
+				"sc_shared": "300",
+				"connections": [
+					{
+					    "name": "twitter-square",
+					    "label": "Follower"
+				    },
+				    {
+					    "name": "linkedin-square",
+					    "label": "2nd"
+				    }
+				]
+		    }
+		    
+	    ]
+
+	}
+}

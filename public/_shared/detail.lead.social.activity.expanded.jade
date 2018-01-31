@@ -1,0 +1,28 @@
+div.activity-expanded
+	h2 Social Activity
+		span.fa.fa-times-circle
+	div.activity
+		span.facebook
+			span.fa.fa-facebook-square
+			span= leads[0].sa_fb_message
+			
+		span.twitter
+			span.fa.fa-twitter-square
+			span= leads[0].sa_tr_message
+			
+		span.linkedin
+			span.fa.fa-linkedin-square
+			span= leads[0].sa_ln_message
+		
+	div
+		ul.posts
+			for post in leads[0].sa_posts
+				li
+					i.fa.fa-facebook-square
+					span= post.timing
+					br
+					span= post.post
+					br
+					span
+						span Likes #{ post.likes }
+						span Shares #{ post.shares }

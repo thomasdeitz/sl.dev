@@ -1,0 +1,15 @@
+doctype
+html
+	head
+		meta(name="viewport", content="width = device-width, initial-scale = 1, minimal-ui")
+		meta(name="robots" content="noindex,nofollow")
+    
+		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous")
+		script(src="./assets/main.js")
+
+		link(rel="stylesheet" href="./main.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Lora:400,700")
+	
+	body(class="#{ current.path.slice(-1) }")
+		!= yield

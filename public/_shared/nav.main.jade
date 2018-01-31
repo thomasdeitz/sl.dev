@@ -1,0 +1,21 @@
+header#mainNav
+	div.toggle-tabs
+		span.fa.fa-address-book-o
+		span More Leads 
+	
+	div.back
+		span.fa.fa-chevron-left
+		span Leads
+	
+	div
+		!= partial("./logo")
+			
+	div
+		if current.path == "index"
+			a(href="./connect") Sign In
+		else
+			a(href="./")
+				span.fa.fa-user-circle
+				span Welcome #{ user.name }
+				span.fa.fa-caret-down
+	

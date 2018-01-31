@@ -1,0 +1,104 @@
+#tabsList {
+	position: fixed;
+	top:$header-height;
+	bottom: 0px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background: map-get($colors, primary);
+	color: map-get($colors, white);
+	list-style: none;
+	font-weight: 700;
+	overflow:auto;
+	-webkit-overflow-scrolling: touch;
+	z-index:2000;
+	
+	@media (max-width: 960px) {
+		top:48px;
+		left:0px;
+		position:absolute;
+		z-index:2000;
+		transition:transform .2s ease-in-out;
+		width: 320px;
+		
+		.lead-detail & { transform:translateX(-100%); }
+		
+		.view-tabs & {
+			transform:translateX(0);
+		}
+	}
+	@media  (min-width: 769px) and (max-width: 960px) {
+		width:320px;
+	}
+	@media (max-width: 960px) {
+		transform:translateX(-100%);
+	}
+	
+	li {
+		
+		&:first-child {
+			padding: $base-padding*3 $base-padding $base-padding $base-padding;
+			font-size: $small-font-size;
+			text-transform: uppercase;
+			color: rgba(map-get($colors, white), .4);
+		}
+		
+		a {
+			display:block;
+			position:relative;
+			padding: $base-padding;
+			color: map-get($colors, white);
+			text-decoration: none;
+			
+			span:first-child {
+				color: map-get($colors, secondary);
+				margin-right: $base-padding/2;
+			}
+			
+			span:nth-child(3) {
+				position:absolute;
+				top:50%;
+				border-radius: $small-font-size + ($base-padding*2/3);
+				font-size: $small-font-size;
+				transform: translateY(-50%);
+				padding:$base-padding/3 $base-padding/2;
+				line-height:1;
+				right:$base-padding;
+				background-color: map-get($colors, secondary);
+				color: map-get($colors, primary);
+			}
+			
+			&:hover {
+				background-color: rgba(map-get($colors, white), .05);
+			}
+			&.active {
+				background-color: rgba(map-get($colors, white), .15);
+			}
+		}
+		
+		&:last-child {
+			margin: $base-padding;
+			border-top:1px solid rgba(map-get($colors, white), .4);
+			padding-top: $base-padding;
+			font-size: $small-font-size;
+			text-transform: uppercase;
+			
+			a {
+				padding: $base-padding;
+				background-color: map-get($colors, secondary);
+				color: map-get($colors, primary);
+				text-align: center;
+				
+				span:first-child {
+					color: map-get($colors, primary);
+					margin-right: $base-padding/2;
+				}
+				
+				&:hover {
+					opacity:.8;
+				}
+			}
+		}
+	}
+}

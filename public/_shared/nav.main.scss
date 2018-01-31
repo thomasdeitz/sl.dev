@@ -1,0 +1,88 @@
+#mainNav {
+	display:flex;
+	align-items: center;
+	height: $header-height;
+	border-bottom:1px solid map-get($colors, lightgray);
+	
+	svg {
+		height:48px;
+		margin: $base-padding;
+	}
+	
+	div:nth-child(3) {
+		flex-grow: 1;
+	}
+	
+	div:nth-child(2) {
+		@media (min-width: 961px){display:none;}
+		opacity:0;
+		transform:translateY(-300%);
+		transition: opacity .2s ease-in-out;
+		
+		.lead-detail & {
+			opacity:1;
+			transform:translateY(0);
+		}
+		
+		@media (min-width: 769) and (max-width: 960px) { 
+			.lead-detail:not(.init-lead-detail) & {
+				opacity:1;
+				transform:translateY(0);
+			}
+		}
+	}
+	
+	div:nth-child(1) {
+		@media (min-width: 961px){display:none;}
+		position:absolute;
+		opacity:1;
+		transform:translateY(0);
+		transition: opacity .2s ease-in-out;
+		
+		.lead-detail & {
+			opacity:0;
+			transform:translateY(-300%);
+			
+		}
+		
+		
+		@media (min-width: 769) and (max-width: 960px) {
+			.lead-detail:not(.init-lead-detail) & {
+				opacity:0;
+				transform:translateY(-300%);
+				
+			}
+		}
+	}
+	
+	div:nth-child(1), div:nth-child(2), div:nth-child(4) {
+		a { color: map-get($colors, primary)}
+		cursor:pointer;
+		color: map-get($colors, primary);
+		
+		span:first-child {
+			padding:0 $base-padding/2 0 $base-padding;
+		}
+
+		span:nth-child(3) {
+			padding:0 $base-padding 0 $base-padding/2;
+		}
+	}
+	
+	@media (max-width: 960px) {
+		height: 48px;
+		text-align:center;
+		
+		svg {
+			height:24px;
+			margin: $base-padding;
+		}
+		
+		div:nth-child(4) {
+			font-size: $h3-font-size;
+			span:not(:first-child) {
+				display:none;
+			}
+		}
+	}
+}

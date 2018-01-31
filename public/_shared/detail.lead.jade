@@ -1,0 +1,94 @@
+main.leadDetail
+	for lead in leads
+		if lead.tab == url
+			div(slug="#{ lead.slug }")
+				header
+					figure(style="background-image:url(#{ lead.img })")
+					div
+						h2.name= lead.name
+						p.title= lead.title
+						
+						for connection in lead.connections 
+							span(class="connection #{connection.name}")
+								span(class="fa fa-#{connection.name}")
+								span= connection.label
+						
+					div
+						h1.percent= lead.value
+						span scoring insights
+				
+				section
+				
+					!= partial("detail.lead.social.personal")
+					
+					!= partial("detail.lead.social.activity")
+						
+					div
+						h5 Social Connections
+						
+						span Could introduce you to...
+						h1= lead.sc
+						span People
+						hr
+						span You share...
+						h1= lead.sc_shared
+						span Connections
+					
+					!= partial("detail.lead.social.trends")
+					
+					!= partial("detail.lead.social.products")
+
+					
+					!= partial("detail.lead.social.employment")
+					
+				!= partial("detail.lead.social.personal.expanded")
+				
+				!= partial("detail.lead.social.trends.expanded")
+				
+				!= partial("detail.lead.social.activity.expanded")
+		if url == 0
+			div(slug="#{ lead.slug }")
+				header
+					figure(style="background-image:url(#{ lead.img })")
+					div
+						h2.name= lead.name
+						p.title= lead.title
+						
+						for connection in lead.connections 
+							span(class="connection #{connection.name}")
+								span(class="fa fa-#{connection.name}")
+								span= connection.label
+						
+					div
+						h1.percent= lead.value
+						span scoring insights
+				
+				section
+				
+					!= partial("detail.lead.social.personal")
+					
+					!= partial("detail.lead.social.activity")
+						
+					div
+						h5 Social Connections
+						
+						span Could introduce you to...
+						h1= lead.sc
+						span People
+						hr
+						span You share...
+						h1= lead.sc_shared
+						span Connections
+					
+					!= partial("detail.lead.social.trends")
+					
+					!= partial("detail.lead.social.products")
+
+					
+					!= partial("detail.lead.social.employment")
+					
+				!= partial("detail.lead.social.personal.expanded")
+				
+				!= partial("detail.lead.social.trends.expanded")
+				
+				!= partial("detail.lead.social.activity.expanded")
