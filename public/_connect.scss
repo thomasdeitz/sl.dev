@@ -1,3 +1,9 @@
+header#mainNav {
+  background-color: map-get($colors,lightestgray);
+  border-bottom: 1pt solid map-get($colors,lightgray);
+  font-size: 11pt;
+}
+
 main.preferences {
     display: flex;
     width: 100%;
@@ -6,6 +12,7 @@ main.preferences {
     align-content: stretch;
     top: 44pt;
     height: calc(100% - 44pt);
+    p { font-size: 12pt; }
     button, span.success {
         display: block;
         width: 100%;
@@ -18,7 +25,7 @@ main.preferences {
         background-color: map-get($colors,primary);
         color: white;
         cursor: pointer;
-        box-shadow: 0px 0px 5px rgba(black,.25);
+        //box-shadow: 0px 0px 5px rgba(black,.25);
         cursor: pointer;
         transition: all .2s ease-in-out;
         outline: none;
@@ -31,7 +38,7 @@ main.preferences {
     }
     & > * {
         &#preferencesDetail {
-            background-color: whiteSmoke;
+            background-color: map-get($colors,lightgray);
             width: 100%;
             display: flex;
             align-items: center;
@@ -39,7 +46,7 @@ main.preferences {
             flex-wrap: wrap;
             align-content: flex-start;
             li {
-                width: calc(25% - 24pt);
+                width: calc(33% - 24pt);
                 margin: 12pt;
                 padding: 24pt;
                 text-align: center;
@@ -47,7 +54,7 @@ main.preferences {
                 height: auto;
                 position: relative;
                 overflow: hidden;
-                box-shadow: 0px 0px 5px rgba(black,.25);
+                //box-shadow: 0px 0px 5px rgba(black,.25);
                 transition: transform .2s ease-in-out;
                 &:first-child {
                     width: 75%;
@@ -71,6 +78,7 @@ main.preferences {
                     background-color: map-get($colors,success);
                     box-shadow: 0px 0px 5px rgba(black,.25);
                 }
+                &:last-child { background-color: map-get($colors,lightestgray); }
                 &:last-child .connection-status {
                     background-color: map-get($colors,error);
                 }
@@ -89,22 +97,30 @@ main.preferences {
         -webkit-overflow-scrolling: touch;
         &#preferencesMenu {
             border-right: 1pt solid map-get($colors,lightgray);
-            width: 200pt;
-            li:first-child {
-                background-color: map-get($colors,primary);
-                a {
-                    color: white;
-                }
-            }
+            width: 320pt;
+            background-color:white;
+            transform:translateY(-44pt);
+            height:calc(100% + 44pt);
+            header { background-color: map-get($colors,lightestgray); a {
+              color: map-get($colors,primary);
+            } }
+            ul li { border-bottom: 1pt solid map-get($colors,lightgray); }
+            h2 { padding: 12pt 12pt 12pt 12pt; margin:0px; }
+            //ul > li:nth-child(2) {
+              //  background-color: map-get($colors,primary);
+              //  a {
+              //      color: white;
+              //  }
+            //}
             a {
                 display: block;
                 padding: 12pt;
-                color: #666;
+                color: #444;
                 font-size: 11pt;
                 text-decoration: none;
                 cursor: pointer;
                 &:hover {
-                    background-color: lightgray;
+                    //background-color: lightgray;
                 }
             }
         }

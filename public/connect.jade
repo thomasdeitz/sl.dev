@@ -1,10 +1,17 @@
 != partial("./_shared/nav.main")
 main.preferences
   ul#preferencesMenu
-    li: a: span Manage Networks
-    li: a: span Manage Connections
-    li: a: span Manage Notifications
-    li: a: span Docs
+    li: ul
+      li: header
+        a 
+          span.fa.fa-chevron-left
+          span &nbsp;Dashboard
+        h2 Preferences
+
+      li: a: span Manage Networks
+      li: a: span Manage Connections
+      li: a: span Manage Notifications
+      li: a: span Docs
 
   ul#preferencesDetail
     li 
