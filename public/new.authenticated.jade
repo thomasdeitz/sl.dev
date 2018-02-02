@@ -1,0 +1,23 @@
+!= partial("./_shared/nav.main")
+main
+  ul#tabsLists
+    li leads
+
+    for tab in tabs
+      li
+        a(href="/articles/#{ tab.url }" tab-cat-target="#{ tab.url }")
+          span(class= tab.icon )
+          span= tab.label
+          span= tab.value
+
+  ul#leadsLists
+    for lead in leads
+        li(tab-cat="#{ lead.tab }" slug-target="#{ lead.slug }")
+          figure(style="background-image:url(#{ lead.img })")
+          div
+            span.name= lead.name
+            br
+            span.title= lead.title
+
+  ul
+    li test

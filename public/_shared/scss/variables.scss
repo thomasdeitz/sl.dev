@@ -1,9 +1,9 @@
 $colors: (
-  primary: #265C80, // #022C48,
-  secondary: #00A99D, // #FFB81C,
-  success: green,
-  warning: gold,
-  error: red,
+	primary: #46a0c7,
+	secondary: #265c80,
+  success: #66BB6A,
+  warning: #FFD740,
+  error: #EF5350,
   black: lighten(black, 30),
   gray: lighten(black, 70),
   lightgray: lighten(black, 90),
@@ -23,7 +23,8 @@ $base-input-padding: $tight-padding;
 
 $border-width: 1px;
 
-$sans-font-family: "Helvetica Neue", sans-serif;
+$sans-font-family: "Nunito", sans-serif;
+$display-font-family: "Nunito", Impact, Helvetica, Arial, sans-serif;
 $base-font-size: 12px;
 $small-font-size: $base-font-size*.75;
 $large-font-size: $base-font-size*1.35;

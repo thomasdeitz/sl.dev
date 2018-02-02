@@ -70,3 +70,78 @@ $breakpoints: ( //list small to large.
     }
   }
 }
+header#mainNav {
+  height: 44pt;
+  //background-color: whiteSmoke;
+  border-bottom: 1pt solid lightgray;
+  .back {
+    display:block !important;
+    opacity:1!important;
+    transform:none!important;
+    font-size:11pt!important;
+    color: map-get($colors, primary)!important;
+  }
+  svg {
+    display:none;
+  }
+}
+
+main:not(.preferences) {
+  display: flex;
+  width:100%;
+  position:fixed;
+  justify-content: flex-start;
+  align-content: stretch;
+  top:44pt;
+  height: calc(100% - 44pt);
+  ul {
+    margin:0px;
+    padding:20px;
+    list-style: none;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+    
+    &#tabsLists {
+      padding:0px;
+      font-weight:700;
+      li { border-bottom: 1px solid none; }
+      a {
+        display:block;
+        padding:12pt;
+        color: #666;
+        font-size: 11pt;;
+        text-decoration: none;
+        
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+    }
+    
+    &#leadsLists {
+      padding:0px;
+      li { border-bottom: 1pt solid lightgray; display:flex;
+        &:nth-child(3) { background-colo  : map-get($colors, primary);  color:w hite;}
+      figure {height: 32pt; width:32pt; background-size: cover; margin:0px 12pt 0 0; border-radius:16pt; border:1pt solid map-get($colors, primary);}
+        
+        margin-left:12pt;
+        padding:12pt 12pt 12pt 0;
+        font-size: 11pt;
+        color: #222;
+        text-decoration: none;
+        .name {
+          font-size: 12pt;
+          font-weight:700;
+        }
+        &:hover {
+        }
+        }
+    }
+  }
+  & > * {
+    &:nth-child(1) { display: absolute; transform: transl ateX(-100%); background-color:whiteSmoke; border-right:1pt solid lightgray; width: 200pt; }
+    &:nth-child(2) { border-right:1pt solid lightgray; width: 320pt; }
+    &:nth-child(3) { flex-grow: 1; max-width:100%; background-color:whiteSmoke;}
+    &:nth-child(4) { border-left:1pt solid lightgray; width: 320pt; }
+  }
+}
