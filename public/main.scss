@@ -1,7 +1,6 @@
 @import '_shared/scss/variables';
 @import '_shared/scss/grid';
 
-@import './connect';
 @import '_shared/nav.main';
 @import '_shared/marquee';
 @import '_shared/list.tabs';
@@ -9,6 +8,7 @@
 @import '_shared/list.leads';
 @import '_shared/detail.lead';
 @import '_shared/detail.lead.social.personal.expanded';
+@import './connect';
 
 body{
   margin: 0;
