@@ -1,32 +1,18 @@
-!= partial("./_shared/nav.main")
+//!= partial("./_shared/nav.main")
+
 main.preferences
-  ul#preferencesMenu
-    li: ul
-      li: header
-        a 
-          span.fa.fa-chevron-left
-          span &nbsp;Dashboard
-        h2 Preferences
-
-      li: a: span Manage Networks
-      li: a: span Manage Connections
-      li: a: span Manage Notifications
-      li: a: span Docs
-
-  ul#preferencesDetail
-    li 
-      h1 Manage Networks
-      p Connecting social networks allows Socialeads to gather data and know what’s happening in people’s lives. The more connected networks you have increases the accuracy and effectivness of the system. 
-    for network, index in networks
-      if index+1 == networks.length
-        li
-          span.social(class="fa #{ network.icon }" style="color:#{network.color}; opacity:.5;")
-          h3= network.label
-          button Connect
-      else
-        li
-          span.social(class="fa #{ network.icon }" style="color:#{network.color};")
-          h3= network.label
-          span.success
-            span.fa.fa-check-circle
-            span &nbsp;Connected on 2/1/2018
+  != partial("./_partials/preferences.menu")
+  != partial("./_partials/preferences.networks")
+  ul#preferencesMenu(style="display:none;")
+    li
+       ul
+          li: header
+            a 
+              span.fa.fa-chevron-left
+              span &nbsp;Dashboard
+          li: h3 Preferences
+    
+          li: a: span Manage Networks
+          li: a: span Manage Connections
+          li: a: span Manage Notifications
+          li: a: span Docs

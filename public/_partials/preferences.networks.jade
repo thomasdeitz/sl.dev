@@ -1,0 +1,13 @@
+div#preferencesDetail
+  header 
+    h1 Manage Networks
+    p Connecting social networks allows Socialeads to gather data and know what’s happening in people’s lives. The more connected networks you have increases the accuracy and effectivness of the system.
+  ul.menu-list
+    for network, index in networks
+      li(id="#{network.label.toLowerCase()}Auth")
+        span.social(class="fa #{ network.icon }" style="color:#{network.color};")
+        h3= network.label
+        button(data-network="#{network.label.toLowerCase()}Auth") Connect
+        small.success
+          span.fa.fa-check-circle
+          span &nbsp;Connected on 2/1/2018

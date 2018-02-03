@@ -14,17 +14,20 @@
 			    "label": "Facebook",
 			    "icon": "fa-facebook-square",
 			    "color": "#3b5998",
-			    "checked": "checked"
+			    "checked": "checked",
+			    "connectedDate": "02/01/2017"
 		    },
 		    {
 			    "label": "Twitter",
 			    "icon": "fa-twitter-square",
-			    "color": "#1da1f2"
+			    "color": "#1da1f2",
+			    "connectedDate": "02/01/2017"
 		    },
 		    {
 			    "label": "LinkedIn",
 			    "icon": "fa-linkedin-square",
-			    "color": "#0077b5"
+			    "color": "#0077b5",
+			    "connectedDate": ""
 		    }
 	    ],
 	    "marquee_image": "https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb",

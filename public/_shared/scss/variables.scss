@@ -26,12 +26,26 @@ $border-width: 1px;
 
 $sans-font-family: "Nunito", sans-serif;
 $display-font-family: "Nunito", Impact, Helvetica, Arial, sans-serif;
-$base-font-size: 12px;
-$small-font-size: $base-font-size*.75;
-$large-font-size: $base-font-size*1.35;
-$h6-font-size: $base-font-size*.875;
-$h5-font-size: $base-font-size;
-$h4-font-size: $base-font-size*1.35;
-$h3-font-size: $base-font-size*1.5;
-$h2-font-size: $base-font-size*2;
-$h1-font-size: $base-font-size*3;
+$base-font-size: 13pt;
+$small-font-size: 11pt;
+$large-font-size: 14pt;
+$h6-font-size: 12pt;
+$h5-font-size: 14pt;
+$h4-font-size: 17pt;
+$h3-font-size: 19pt;
+$h2-font-size: 25pt;
+$h1-font-size: 31pt;
+
+/*
+Large Title	Regular	  31pt  38pt	12pt
+Title 1 Regular	      25pt	31pt	14pt
+Title 2	Regular	      19pt	24pt	-26pt
+Title 3	Regular	      17pt	22pt	-24pt
+Headline	Semi-Bold	  14pt	19pt	-11pt
+Body	Regular	        14pt  19pt	-11pt
+Callout	Regular	      13pt  18pt	-6pt
+Subhead	Regular	      12pt	16pt	0pt
+Footnote	Regular	    12pt	16pt	0pt
+Caption 1	Regular	    11pt	13pt	6pt
+Caption 2	Regular	    11pt	13pt	6pt
+*/

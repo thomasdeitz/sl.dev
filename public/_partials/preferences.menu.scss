@@ -1,0 +1,67 @@
+main.preferences { top:0px; height:100%; }
+
+ul.menu-list {
+  display:block;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#preferencesMenu {
+  border-right: 1pt solid map-get($colors,lightgray);
+  width: 320px;
+  font-size: $small-font-size;
+  flex-shrink: 0;
+
+  header { 
+    background-color: map-get($colors,lightestgray);
+    border-bottom: 1pt solid map-get($colors,lightgray);
+    
+    & > * {
+      padding: 12pt;
+      margin:0px;
+    }
+    
+    a {
+      position:relative;
+      display: inline-block;
+      text-decoration: none;
+      color: map-get($colors,primary);
+      
+      &:before {
+        content:'';
+        display:block;
+        position:absolute;
+        top:50%;
+        transform-origin:center center;
+        transform: translate(-70%, -50%) rotate(45deg);
+        border: 1pt solid map-get($colors,primary);
+        border-right-color: transparent;
+        border-top-color: transparent;
+        height: $base-font-size/2;
+        width: $base-font-size/2;
+      }
+    }
+  }
+
+  ul {
+    background-color:white;
+
+    li { 
+      border-bottom: 1pt solid map-get($colors,lightgray);
+      
+      &:first-child {
+        a { color: map-get($colors,primary); }
+      }
+    }
+    
+    a {
+      display: block;
+      padding: 12pt;
+      text-decoration: none;
+    }
+  }
+}

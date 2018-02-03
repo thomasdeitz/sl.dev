@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: flex-start;
+  align-content: stretch;
+  top: 44pt;
+  height: calc(100% - 44pt);
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+    
+  & > * {
+    #tabList {width:320pt; background:red;}
+    #leadList {width:320pt;background:yellow;flex-shrink: 0;}
+    #leadDetail {width:100%;background:blue; flex-shrink: 1;}
+  }
+}

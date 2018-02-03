@@ -1,0 +1,98 @@
+button, small.success {
+  display: block;
+  width: 100%;
+  border: 0px;
+  padding: 8pt 16pt;
+  border-radius: 2pt;
+  font-size:$small-font-size;
+  
+}
+
+button {
+  background-color: map-get($colors,primary);
+  color: white;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  outline: none;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  &:active {
+    transform: scale(.9);
+  }
+}
+
+#preferencesDetail {
+  background-color: map-get($colors,lightgray);
+  width: 100%;
+  text-align: center;
+  
+  header {
+    padding: 0 48pt 24pt 48pt;
+  }
+  
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  li {
+    width: calc(33% - 24pt);
+    margin: 12pt;
+    padding: 24pt;
+    background-color: white;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    opacity:.75;
+    transition: all .2s ease-in-out;
+    
+    &:hover {
+      opacity:1;
+    }
+
+    .success {
+      display: none;
+      color: map-get($colors,success);
+    }
+    
+    button {
+      display:inline-block;
+    }
+
+    .fa.social {
+      font-size: 44pt;
+    }
+
+    .connection-status {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 48pt;
+      width: 48pt;
+      transform-origin: center center;
+      transform: translate(50%,-50%) rotate(45deg);
+      background-color: map-get($colors,success);
+      box-shadow: 0px 0px 5px rgba(black,.25);
+    }
+  
+    &.connected { 
+      background-color: map-get($colors,lightestgray);
+      opacity:1;
+    
+      .success {
+        display: inline-block;
+      }
+      
+      button {
+        display:none;
+      }
+    }
+  }
+}
