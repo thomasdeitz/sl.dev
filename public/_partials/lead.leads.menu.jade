@@ -1,0 +1,13 @@
+nav
+  header
+    a(href="./authenticated") Dashboard
+    h3 Leads
+  ul#leads.menu-list
+    for lead in leads
+        li(tab-cat="#{ lead.tab }" slug-target="#{ lead.slug }")
+          a
+            figure(style="background-image:url(#{ lead.img })")
+            div
+              span.name= lead.name
+              br
+              span.title= lead.title

@@ -1,5 +1,9 @@
-!= partial("./_shared/nav.main")
-main
-  != partial("./_shared/list.tabs")
-  != partial("./_shared/list.leads")
-  != partial("./_shared/detail.lead")
+//!= partial("./_shared/nav.main")
+main.auth
+  aside
+    != partial("./_partials/lead.categories.menu")
+    != partial("./_partials/lead.leads.menu")
+
+  section
+    div
+      span test

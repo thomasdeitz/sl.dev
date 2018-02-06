@@ -1,0 +1,93 @@
+main.auth {
+  top:0px; height:100%;
+  
+  figure { 
+    margin: 0px;
+    height: 24pt;
+    width: 24pt;
+    position:absolute;
+    left: 12pt;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+   }
+  section {
+    background: map-get($colors, lightgray);
+    flex-grow:1;
+  }
+  aside {
+    width: 320px;
+    nav {
+      height:100%;
+      overflow: hidden;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      
+      header { 
+        background-color: map-get($colors,lightestgray);
+        border-bottom: 1pt solid map-get($colors,lightgray);
+        
+        & > * {
+          padding: 12pt;
+          margin:0px;
+        }
+        
+        a {
+          position:relative;
+          display: inline-block;
+          text-decoration: none;
+          color: map-get($colors,primary);
+          
+          &:before {
+            content:'';
+            display:block;
+            position:absolute;
+            top:50%;
+            transform-origin:center center;
+            transform: translate(-70%, -50%) rotate(45deg);
+            border: 1pt solid map-get($colors,primary);
+            border-right-color: transparent;
+            border-top-color: transparent;
+            height: $base-font-size/2;
+            width: $base-font-size/2;
+          }
+        }
+      }
+    }
+    ul {      
+      li {
+        border-bottom: 1pt solid map-get($colors,lightgray);
+      }
+      &#leadCategories {
+        border-right: 1pt solid map-get($colors,lightgray);
+        width: 100%;
+        font-size: $small-font-size;
+        flex-shrink: 0;
+      }
+      &#leads {
+        border-right: 1pt solid map-get($colors,lightgray);
+        width: 100%;;
+        font-size: $small-font-size;
+        flex-shrink: 0;
+      }
+      
+      li {
+        a {
+          position:relative;
+          display: block;
+          padding: 12pt 12pt 12pt 48pt;
+          text-decoration: none;
+          
+          div { 
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          .name {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

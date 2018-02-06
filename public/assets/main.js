@@ -8,7 +8,7 @@
   $(document).ready(function () {
 
     if (!Cookies.get('facebookAuth') && !Cookies.get('twitterAuth') && !Cookies.get('linkedinAuth')) {
-      if (window.location.pathname != "/sl.demo/connect" && window.location.pathname != "/sl.demo/authenicating" && window.location.pathname != "/sl.demo/") {
+      if (window.location.pathname != "/connect" && window.location.pathname != "/authenicating" && window.location.pathname != "/") {
         window.location.href = "./connect";
         console.log(window.location.pathname)
       }
