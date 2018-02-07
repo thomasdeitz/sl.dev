@@ -1,0 +1,14 @@
+nav(id="#{ id }")
+  header
+    a(href="#{ backHref }")= backLabel
+    h3= header
+  ul.menu-list
+    for listItem in list
+      != partial("../"+listItemTemplate+"/listItem", { item: listItem })
+
+// typeof id = string
+// typeof backHref = string
+// typeof backLabel = string
+// typeof header = string
+// typeof list = object
+// typeof listItemTemplate = string

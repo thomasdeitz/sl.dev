@@ -2,7 +2,7 @@
 main.auth
   aside
     != partial("./_partials/lead.categories.menu")
-    != partial("./_partials/lead.leads.menu")
+    != partial("./_partials/nav/sideMenu", { id: "leadMenu", backLabel: "Categories", backHref: "#categories", header: "All Leads", listItemTemplate: "lead", list: leads })
 
   section
     div

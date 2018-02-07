@@ -1,0 +1,18 @@
+li(tab-cat="#{ item.tab }" slug-target="#{ item.slug }")
+  a
+    figure(style="background-image:url(#{ item.img })")
+    div
+      span.name= item.name
+      span(style="float:right; color:#46a0c7;")
+        span= item.value
+        span %
+      br
+      span.title= item.title
+
+// typeof item = object
+// typeof item.tab = string... should be int
+// typeof item.slug = string
+// typeof item.img = string
+// typeof item.name = string
+// typeof item.title = string
+// typeof item.value = string... should be int
