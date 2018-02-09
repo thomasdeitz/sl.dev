@@ -1,0 +1,23 @@
+section.leadDetail(style="position:relative;")
+  for lead in leads
+    != partial("./detail.header", { lead: lead })
+
+    section
+
+      != partial("../../_shared/detail.lead.social.personal")
+      
+      != partial("../../_shared/detail.lead.social.activity")
+      
+      != partial("../../_shared/detail.lead.social.connection", { lead: lead })
+      
+      != partial("../../_shared/detail.lead.social.trends")
+      
+      != partial("../../_shared/detail.lead.social.products")
+      
+      != partial("../../_shared/detail.lead.social.employment")
+
+    != partial("detail.lead.social.personal.expanded")
+    
+    != partial("detail.lead.social.trends.expanded")
+    
+    != partial("detail.lead.social.activity.expanded")

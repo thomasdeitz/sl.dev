@@ -1,9 +1,7 @@
 //!= partial("./_shared/nav.main")
 main.auth
   aside
-    != partial("./_partials/lead.categories.menu")
+    //!= partial("./_partials/nav/sideMenu", { id: "categoryMenu", header: "Categories", listItemTemplate: "categories", list: tabs })
     != partial("./_partials/nav/sideMenu", { id: "leadMenu", backLabel: "Categories", backHref: "#categories", header: "All Leads", listItemTemplate: "lead", list: leads })
 
-  section
-    div
-      span test
+  != partial("./_partials/lead/detail")

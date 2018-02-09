@@ -1,6 +1,7 @@
 nav(id="#{ id }")
   header
-    a(href="#{ backHref }")= backLabel
+    if backLabel && backHref
+      a(href="#{ backHref }")= backLabel
     h3= header
   ul.menu-list
     for listItem in list

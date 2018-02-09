@@ -1,0 +1,18 @@
+header
+  figure(style="background-image:url(#{ lead.img })")
+  div.info
+    h3.name= lead.name
+    p.title= lead.title
+    small
+      for connection in lead.connections
+        - var network = networks.filter(network => network.name == connection.name)[0]
+        - var color = network ? network.color : ""
+        span(class="connection #{connection.name}")
+          span(class="fa fa-#{connection.name}" style="color:#{color};")
+          span= connection.label
+
+  div.score
+    h1.percent
+      span= lead.value
+      span %
+    small scoring insights

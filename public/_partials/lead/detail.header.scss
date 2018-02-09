@@ -1,0 +1,40 @@
+.leadDetail {
+  header {
+    background-color: map-get($colors, white);
+    padding:12pt;
+    display:flex;
+    
+    figure {
+      margin:0px;
+      height:60pt;
+      width: 60pt;
+      border-radius: 50%;
+      background-size: cover;
+      margin-right: 12pt;
+    }
+    
+    .info { flex-grow: 1; }
+    .score { 
+      flex-shrink: 1;
+      text-align:center;
+      h1 { color: map-get($colors, primary);}
+    }
+    
+    h1, h3, p {
+      margin:0;
+    }
+    
+    .connection {
+      
+      &:not(:last-child):after {
+        content: "|";
+        margin-right: 6pt;
+        margin-left: 6pt;
+        color: map-get($colors,lightgray);
+      }
+      .fa {
+        margin-right: 6pt;
+      }
+    }
+  }
+}

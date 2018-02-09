@@ -1,10 +1,10 @@
 main.auth {
   top:0px; height:100%;
   
-  figure { 
+  nav figure { 
     margin: 0px;
-    height: 24pt;
-    width: 24pt;
+    height: 30pt;
+    width: 30pt;
     position:absolute;
     left: 12pt;
     border-radius: 50%;
@@ -16,12 +16,12 @@ main.auth {
     flex-grow:1;
   }
   aside {
-    width: 320px;
+    width: 320pt;
+    border-right: 1pt solid map-get($colors,lightgray);
     nav {
+      display:flex;
+      flex-direction: column;
       height:100%;
-      overflow: hidden;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
       
       header { 
         background-color: map-get($colors,lightestgray);
@@ -54,7 +54,11 @@ main.auth {
         }
       }
     }
-    ul {      
+    ul {
+      height:90%;
+      overflow: hidden;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;  
       li {
         border-bottom: 1pt solid map-get($colors,lightgray);
       }
@@ -75,7 +79,7 @@ main.auth {
         a {
           position:relative;
           display: block;
-          padding: 12pt 12pt 12pt 48pt;
+          padding: 12pt 12pt 12pt 54pt;
           text-decoration: none;
           
           div { 

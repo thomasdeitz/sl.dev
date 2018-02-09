@@ -1,5 +1,13 @@
 li
-  a(href="/articles/#{ tab.url }" tab-cat-target="#{ tab.url }")
-    span(class= tab.icon )
-    span= tab.label
-    span= tab.value
+  a(href="/articles/#{ item.url }" tab-cat-target="#{ item.url }")
+    span(class= item.icon )
+    span= item.label
+    if item.url == "0"
+      span= leads.length
+    else
+      span= leads.filter(lead => lead.tab == item.url).length
+    
+// typeof item = object
+// typeof item.url = string
+// typeof item.icon = string
+// typeof item.label = string
