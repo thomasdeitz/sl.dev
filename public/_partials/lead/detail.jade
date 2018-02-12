@@ -4,17 +4,17 @@ section.leadDetail(style="position:relative;")
 
     section
 
-      != partial("../../_shared/detail.lead.social.personal")
+      != partial("../tile/personal", {title: "Personal Insights", target: "personal"})
       
-      != partial("../../_shared/detail.lead.social.activity")
+      != partial("../tile/activity", {title: "Social Activity", target: "activity"})
       
-      != partial("../../_shared/detail.lead.social.connection", { lead: lead })
+      != partial("../tile/connection", {title: "Social Connections", target: "connection",lead: lead})
       
-      != partial("../../_shared/detail.lead.social.trends")
+      != partial("../tile/trends", {title: "Social Trends", target: "trends"})
       
-      != partial("../../_shared/detail.lead.social.products")
+      != partial("../tile/products", {title: "Product Suggestions", target: "products"})
       
-      != partial("../../_shared/detail.lead.social.employment")
+      != partial("../tile/employment", {title: "Employment", target: "employment"})
 
     != partial("detail.lead.social.personal.expanded")
     

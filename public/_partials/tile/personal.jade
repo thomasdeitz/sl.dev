@@ -1,0 +1,16 @@
+//- personal.jade
+
+extends ./tile.jade
+
+block content
+  for insight in leads[0].personal.pro
+    p.personal
+      span.fa.fa-check
+      span= insight
+  
+  hr
+  
+  for insight in leads[0].personal.con
+    p.personal
+      span.fa.fa-close
+      span= insight

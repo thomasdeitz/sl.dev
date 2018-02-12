@@ -1,0 +1,20 @@
+//- activity.jade
+
+extends ./tile.jade
+
+block content
+  a.facebook
+    span.fa.fa-facebook-square
+    span= leads[0].sa_fb_message
+  
+  a.twitter
+    span.fa.fa-twitter-square
+    span= leads[0].sa_tr_message
+  
+  a.linkedin
+    span.fa.fa-linkedin-square
+    span= leads[0].sa_ln_message
+  
+  a.windows
+    span.fa.fa-windows
+    span= leads[0].sa_ds_message

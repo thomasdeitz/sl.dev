@@ -3,6 +3,8 @@
 
 @import '_connect';
 @import '_auth';
+
+@import '_partials/tile/tile';
 @import '_partials/lead/detail.header';
 @import '_shared/nav.main';
 @import '_shared/marquee';
