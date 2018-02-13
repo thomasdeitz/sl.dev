@@ -63,6 +63,7 @@ nav.sideMenu {
           overflow: hidden;
         }
       }
+      &.active { background-color:map-get($colors,primary); a { color:white; }}
     }
   }
 }

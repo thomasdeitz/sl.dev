@@ -35,28 +35,13 @@
     }
 
     // Tab stuff
-    var tabList = $('#tabsList > li');
+    var categoryList = $('#categoryMenu li');
+    var tabList = $('#categoryMenu li');
     var leadsList = $('.leadsList');
+    var leadMenu = $('#leadMenu li');
 
-    function selectTab(tab) {
-      var tab = tab || $(tabList)[1];
-      var target = $(tab).find('a').attr("tab-cat-target");
 
-      $(tab).siblings().find('a').removeClass('active')
-      $(tab).find('a').addClass('active');
-
-      $('#tabs > div').each(function () {
-        var tabTarget = $(this);
-        $('body').removeClass('tile-detail');
-        $('div[class*="-expanded"]').removeClass('active-tile');
-
-        if (tabTarget.attr('tab-cat') == target) {
-          $(tabTarget).show();
-        } else {
-          $(tabTarget).hide();
-        }
-      });
-    }
+    
     // Newish
     $("a[href='#categories']").on("click", function (e) {
       e.preventDefault();
@@ -72,6 +57,12 @@
       selectLead(this);
       $('body').removeClass('view-tabs');
       $('body').addClass('show-lead-detail');
+    });
+    
+    $(categoryList).click(function (e) {
+      e.preventDefault();
+      //$('body').removeClass('view-tabs');
+      selectTab(this);
     });
     
     function selectLead(lead) {
@@ -91,6 +82,28 @@
           $(detail).addClass('visible');
         } else {
           $(detail).removeClass('visible');
+        }
+      });
+    }
+    
+    function selectTab(category) {
+      var category = category || $(categoryList)[0];
+      var target = $(category).find('a').attr("tab-cat-target");
+
+      $(category).siblings().removeClass('active')
+      $(category).addClass('active');
+
+      $(leadMenu).each(function () {
+        var categoryTarget = $(this);
+        $('body').removeClass('tile-detail');
+        $('div[class*="-expanded"]').removeClass('active-tile');
+
+        if (target == 0) {
+          $(leadMenu).show();
+        }else if (categoryTarget.attr('tab-cat') == target) {
+          $(categoryTarget).show();
+        } else {
+          $(categoryTarget).hide();
         }
       });
     }

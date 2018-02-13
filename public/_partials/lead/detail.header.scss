@@ -12,6 +12,7 @@
       border-radius: 50%;
       background-size: cover;
       margin-right: 12pt;
+      flex-shrink: 0;
     }
     
     .info { flex-grow: 1; }
