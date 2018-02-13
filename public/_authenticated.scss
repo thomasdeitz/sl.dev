@@ -1,0 +1,23 @@
+main.authenticated {
+  top:0px; height:100%;
+  
+  aside {
+    width: 320pt;
+    position:relative;
+    flex-shrink: 0;
+    border-right: 1pt solid map-get($colors,lightgray);
+
+    nav {
+      transition: all .3s ease-in-out;
+      &#categoryMenu { opacity:0; }
+      &#leadMenu { opacity: 1;}
+      .show-categories &#categoryMenu { opacity: 1; }
+      .show-categories &#leadMenu { opacity: 0; left: 100%;}
+    }
+  }
+
+  section {
+    background: map-get($colors, lightgray);
+    flex-grow:1;
+  }
+}

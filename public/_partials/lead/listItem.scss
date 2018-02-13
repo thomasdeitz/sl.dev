@@ -1,0 +1,21 @@
+//- listItem.scss
+
+.sideMenu {
+  li.lead-list-item {
+    a { padding-left: 54pt; }
+    figure { 
+      margin: 0px;
+      height: 30pt;
+      width: 30pt;
+      position:absolute;
+      left: 12pt;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center center;
+     }
+     
+     .name {
+       font-weight: bold;
+     }
+  }
+}

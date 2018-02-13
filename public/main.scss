@@ -1,21 +1,34 @@
+//Variables
 @import '_shared/scss/variables';
+
+// Grid System
 @import '_shared/scss/grid';
 
-@import '_connect';
-@import '_auth';
+// Partials
+//@import '_shared/nav.main';
+
+@import '_partials/nav/sideMenu';
+
+@import '_partials/category/listItem';
+
+@import '_partials/lead/listItem';
+@import '_partials/lead/detail';
+@import '_partials/lead/detail.header';
 
 @import '_partials/tile/tile';
-@import '_partials/lead/detail.header';
-@import '_shared/nav.main';
-@import '_shared/marquee';
-//@import '_shared/list.tabs';
-//@import '_shared/detail.tabs';
-//@import '_shared/list.leads';
-//@import '_shared/detail.lead';
+
+
+
+//@import '_shared/marquee';
+
 @import '_shared/_new';
-@import '_shared/detail.lead.social.personal.expanded';
-@import '_partials/preferences/menu';
+
+//@import '_partials/preferences/menu';
 @import '_partials/preferences/networks';
+
+// Pages
+@import '_authenticated';
+@import '_connect';
 
 body{
   margin: 0;

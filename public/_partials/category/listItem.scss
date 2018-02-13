@@ -1,0 +1,12 @@
+//listItem.scss
+
+.sideMenu {
+  li.category-list-item {
+    a { padding-left: 36pt; }
+    .fa {
+      position: absolute;
+      top: 12pt;
+      left: 12pt;
+    } 
+  }
+}

@@ -57,7 +57,23 @@
         }
       });
     }
-
+    // Newish
+    $("a[href='#categories']").on("click", function (e) {
+      e.preventDefault();
+      $("body").addClass("show-categories");
+    });
+    
+    $("#categoryMenu a").on("click", function (e) {
+      e.preventDefault();
+      $("body").removeClass("show-categories");
+    });
+    
+    $("#leadMenu li").click(function () {
+      selectLead(this);
+      $('body').removeClass('view-tabs');
+      $('body').addClass('show-lead-detail');
+    });
+    
     function selectLead(lead) {
       var lead = lead;
       var target = $(lead).attr("slug-target");
@@ -68,7 +84,7 @@
       $('body').removeClass('init-lead-detail');
       $('div[class*="-expanded"]').removeClass('active-tile');
 
-      $(lead).parent().siblings('.leadDetail').find('> div').each(function () {
+      $(lead).parents("aside").siblings('.leadDetail').find('> div').each(function () {
         var detail = $(this);
 
         if (detail.attr('slug') == target) {
@@ -78,6 +94,9 @@
         }
       });
     }
+    
+    // newish end
+    
 
     selectTab(); //document load
 

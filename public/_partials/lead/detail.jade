@@ -1,23 +1,24 @@
 section.leadDetail(style="position:relative;")
   for lead in leads
-    != partial("./detail.header", { lead: lead })
-
-    section
-
-      != partial("../tile/personal", {title: "Personal Insights", target: "personal"})
+    div(slug="#{lead.slug}")
+      != partial("./detail.header", { lead: lead })
+  
+      section
+  
+        != partial("../tile/personal", {title: "Personal Insights", target: "personal"})
+        
+        != partial("../tile/activity", {title: "Social Activity", target: "activity"})
+        
+        != partial("../tile/connection", {title: "Social Connections", target: "connection",lead: lead})
+        
+        != partial("../tile/trends", {title: "Social Trends", target: "trends"})
+        
+        != partial("../tile/products", {title: "Product Suggestions", target: "products"})
+        
+        != partial("../tile/employment", {title: "Employment", target: "employment"})
+  
+      != partial("detail.lead.social.personal.expanded")
       
-      != partial("../tile/activity", {title: "Social Activity", target: "activity"})
+      != partial("detail.lead.social.trends.expanded")
       
-      != partial("../tile/connection", {title: "Social Connections", target: "connection",lead: lead})
-      
-      != partial("../tile/trends", {title: "Social Trends", target: "trends"})
-      
-      != partial("../tile/products", {title: "Product Suggestions", target: "products"})
-      
-      != partial("../tile/employment", {title: "Employment", target: "employment"})
-
-    != partial("detail.lead.social.personal.expanded")
-    
-    != partial("detail.lead.social.trends.expanded")
-    
-    != partial("detail.lead.social.activity.expanded")
+      != partial("detail.lead.social.activity.expanded")

@@ -1,0 +1,12 @@
+.leadDetail {
+  & > div {
+    display:none;
+    &.visible {
+      display:block;
+    }
+    section {
+      display:flex;
+      flex-wrap: wrap;
+    }
+  }
+}

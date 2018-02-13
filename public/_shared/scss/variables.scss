@@ -8,7 +8,7 @@ $colors: (
   gray: lighten(black, 70),
   lightgray: lighten(black, 92),
   lightestgray: lighten(black, 98),
-  white: white,
+  white: white
 );
 
 $grid-config: (
@@ -16,9 +16,22 @@ $grid-config: (
   gutter-width: 4%
 );
 
+$app-dimensions: (
+  header-height: "72pt",
+  list-figure-size: "24pt",
+  detail-header-height: "84pt",
+  detail-figure-size: "60pt",
+  base-padding: "12pt",
+  tight-padding: "6pt",
+  border-width: "1pt"
+);
+
+@debug map-get($app-dimensions, border-width); 
+
 $header-height: 72px;
 
-$base-padding: 12px;
+$base-padding: 12pt;
+
 $tight-padding: $base-padding/2;
 $base-input-padding: $tight-padding;
 
