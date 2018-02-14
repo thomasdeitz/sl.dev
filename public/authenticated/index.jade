@@ -1,0 +1,10 @@
+//- authenticated/index.jade
+
+//!= partial("./_shared/nav.main")
+
+main.authenticated
+  aside
+    != partial("../_partials/nav/sideMenu", { id: "categoryMenu", header: "Categories", listItemTemplate: "category", list: tabs })
+    != partial("../_partials/nav/sideMenu", { id: "leadMenu", backLabel: "Categories", backHref: "#categories", header: "All Leads", listItemTemplate: "lead", list: leads })
+
+  != partial("../_partials/lead/detail")

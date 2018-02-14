@@ -1,0 +1,37 @@
+//- trend.jade
+
+extends ./expanded.jade
+
+block content
+  div.cloud 
+    for trend, i in leads[0].st
+      - var size = 24 - i*2
+      span(style="font-size: #{ size }px") #{ '#' + trend.label }
+
+  for trend in leads[0].st
+    if trend.usage
+      div
+        strong Usage
+        br
+        br
+        ul
+          for use in trend.usage
+            li= use
+
+    if trend.st_posts
+      - console.log(trend.st_posts)
+      div
+        strong Recent Posts
+        br
+        br
+        ul.posts
+          for post in trend.st_posts
+            li
+              i.fa.fa-facebook-square
+              span= post.timing
+              br
+              span= post.post
+              br
+              span
+                span Likes #{ post.likes }
+                span Shares #{ post.shares }

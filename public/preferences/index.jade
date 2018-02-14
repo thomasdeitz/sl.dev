@@ -1,0 +1,22 @@
+//- preferences/index.jade
+
+//!= partial("../_shared/nav.main")
+
+main.preferences
+  aside
+    != partial("../_partials/nav/sideMenu", { id: "preferencesMenu", backLabel: "Dashboard", backHref: "./authenticated", header: "Preferences", listItemTemplate: "preferences", list: preferences })
+  //!= partial("../_partials/preferences/menu")
+  != partial("../_partials/preferences/networks")
+  ul#preferencesMenu(style="display:none;")
+    li
+       ul
+          li: header
+            a 
+              span.fa.fa-chevron-left
+              span &nbsp;Dashboard
+          li: h3 Preferences
+    
+          li: a: span Manage Networks
+          li: a: span Manage Connections
+          li: a: span Manage Notifications
+          li: a: span Docs

@@ -1,24 +1,33 @@
+//- _partials/lead/detail.jade
+
 section.leadDetail(style="position:relative;")
   for lead in leads
     div(slug="#{lead.slug}")
       != partial("./detail.header", { lead: lead })
   
       section
+        div
   
-        != partial("../tile/personal", {title: "Personal Insights", target: "personal"})
-        
-        != partial("../tile/activity", {title: "Social Activity", target: "activity"})
-        
-        != partial("../tile/connection", {title: "Social Connections", target: "connection",lead: lead})
-        
-        != partial("../tile/trends", {title: "Social Trends", target: "trends"})
-        
-        != partial("../tile/products", {title: "Product Suggestions", target: "products"})
-        
-        != partial("../tile/employment", {title: "Employment", target: "employment"})
+          != partial("../tile/personal", {title: "Personal Insights", target: "personal"})
+          
+          != partial("../tile/activity", {title: "Social Activity", target: "activity"})
+          
+          != partial("../tile/connection", {title: "Social Connections", target: "connection",lead: lead})
+          
+          != partial("../tile/trends", {title: "Social Trends", target: "trends"})
+          
+          != partial("../tile/products", {title: "Product Suggestions", target: "products"})
+          
+          != partial("../tile/employment", {title: "Employment", target: "employment"})
   
-      != partial("detail.lead.social.personal.expanded")
-      
-      != partial("detail.lead.social.trends.expanded")
-      
-      != partial("detail.lead.social.activity.expanded")
+      != partial("../expanded/personal", {title: "Personal Insights", target: "personal"})
+        
+      != partial("../expanded/activity", {title: "Social Activity", target: "activity"})
+        
+      != partial("../expanded/connection", {title: "Social Connections", target: "connection",lead: lead})
+        
+      != partial("../expanded/trends", {title: "Social Trends", target: "trends"})
+        
+      != partial("../expanded/products", {title: "Product Suggestions", target: "products"})
+        
+      != partial("../expanded/employment", {title: "Employment", target: "employment"})

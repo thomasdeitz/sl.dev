@@ -11,17 +11,11 @@ main {
   flex-wrap: nowrap;
   align-content: stretch;
   
-  @media only screen 
+  @media only screen
     and (min-device-width: 320px) 
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2) {
     display:block;
     overflow: scroll;
-  }
-    
-  & > * {
-    #tabList {width:320pt; background:red;}
-    #leadList {width:320pt;background:yellow;flex-shrink: 0;}
-    #leadDetail {width:100%;background:blue; flex-shrink: 1;}
   }
 }

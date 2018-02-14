@@ -1,3 +1,5 @@
+//- _partials/lead/detail.scss
+
 .leadDetail {
   & > div {
     display:none;
@@ -5,8 +7,14 @@
       display:block;
     }
     section {
-      display:flex;
-      flex-wrap: wrap;
+      position:relative; //
+      height: 500px; //
+      overflow:hidden; //
+      overflow-y: scroll; //
+      & > div { //
+        display:flex;
+        flex-wrap: wrap;
+      }
     }
   }
 }

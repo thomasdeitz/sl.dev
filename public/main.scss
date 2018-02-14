@@ -1,12 +1,12 @@
+//- main.scss
+
 //Variables
-@import '_shared/scss/variables';
+@import '_scss/variables';
 
 // Grid System
-@import '_shared/scss/grid';
+@import '_scss/grid';
 
 // Partials
-//@import '_shared/nav.main';
-
 @import '_partials/nav/sideMenu';
 
 @import '_partials/category/listItem';
@@ -17,18 +17,11 @@
 
 @import '_partials/tile/tile';
 
-
-
-//@import '_shared/marquee';
-
-@import '_shared/_new';
-
-//@import '_partials/preferences/menu';
 @import '_partials/preferences/networks';
 
 // Pages
-@import '_authenticated';
-@import '_connect';
+@import 'authenticated/_styles';
+@import 'preferences/_styles';
 
 body{
   margin: 0;
@@ -44,6 +37,28 @@ body{
 
 * {
 	box-sizing:border-box;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: flex-start;
+  align-content: stretch;
+  top: 44pt;
+  height: calc(100% - 44pt);
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  
+  @media only screen
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    display:block;
+    overflow: scroll;
+  }
 }
 
 h1 {
