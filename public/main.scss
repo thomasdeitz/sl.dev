@@ -1,9 +1,8 @@
 //- main.scss
 
-//Variables
+//Reusables
 @import '_scss/variables';
-
-// Grid System
+@import '_scss/functions';
 @import '_scss/grid';
 
 // Partials
@@ -28,7 +27,7 @@ body{
   padding: 0;
   background: map-get($colors, white);
   color: map-get($colors, black);
-  font: normal normal 300 #{$base-font-size}/1.25 $sans-font-family;
+  font: normal normal 300 #{map-fetch($font, items p)}/1.25 #{map-get($font, family)};
   overflow:hidden;
   height:100%;
   width:100%;
@@ -61,34 +60,8 @@ main {
   }
 }
 
-h1 {
-	font-size: $h1-font-size;
-}
-
-h2 {
-	font-size: $h2-font-size;
-}
-
-h3 {
-	font-size: $h3-font-size;
-}
-
-h4 {
-	font-size: $h4-font-size;
-}
-
-h5 {
-	font-size: $h5-font-size;
-}
-
-h6 {
-	font-size: $h6-font-size;
-}
-
-p {
-	font-size: $base-font-size;
-}
-
-small {
-	font-size: $small-font-size;
+@each $i, $item in map-get($font, items) {
+  #{$i} {
+    font-size: $item;
+  }
 }

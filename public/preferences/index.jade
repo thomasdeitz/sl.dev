@@ -4,7 +4,7 @@
 
 main.preferences
   aside
-    != partial("../_partials/nav/sideMenu", { id: "preferencesMenu", backLabel: "Dashboard", backHref: "./authenticated", header: "Preferences", listItemTemplate: "preferences", list: preferences })
+    != partial("../_partials/nav/sideMenu", { id: "preferencesMenu", backLabel: "Dashboard", backHref: "../authenticated", header: "Preferences", listItemTemplate: "preferences", list: preferences })
   //!= partial("../_partials/preferences/menu")
   != partial("../_partials/preferences/networks")
   ul#preferencesMenu(style="display:none;")

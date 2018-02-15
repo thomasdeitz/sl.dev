@@ -1,3 +1,5 @@
+//- variables.scss
+
 $colors: (
 	primary: #46a0c7,
 	secondary: #265c80,
@@ -17,16 +19,32 @@ $grid-config: (
 );
 
 $app-dimensions: (
-  header-height: "72pt",
-  list-figure-size: "24pt",
-  detail-header-height: "84pt",
-  detail-figure-size: "60pt",
-  base-padding: "12pt",
-  tight-padding: "6pt",
-  border-width: "1pt"
+  app-header-height: 44pt,
+  side-menu-header-height: 72pt,
+  aside-width: 320pt,
+  list-figure-size: 24pt,
+  detail-header-height: 88pt,
+  detail-figure-size: 60pt,
+  base-padding: 12pt,
+  tight-padding: 6pt,
+  border-width: 1pt
 );
 
-@debug map-get($app-dimensions, border-width); 
+$font: (
+  family: "'Nunito', sans-serif",
+  items: (
+    small: 11pt,
+    p: 13pt,
+    h1: 31pt,
+    h2: 25pt,
+    h3: 19pt,
+    h4: 17pt,
+    h5: 14pt,
+    h6: 12pt
+  ),
+);
+
+//TODO: switch all scss to use above maps and remove below variables
 
 $header-height: 72px;
 
@@ -37,11 +55,11 @@ $base-input-padding: $tight-padding;
 
 $border-width: 1px;
 
-$sans-font-family: "Nunito", sans-serif;
-$display-font-family: "Nunito", Impact, Helvetica, Arial, sans-serif;
+$sans-font-family: "Nunito", Helvetica, Arial, sans-serif;
+$display-font-family: "Nunito", Helvetica, Arial, sans-serif;
+
 $base-font-size: 13pt;
 $small-font-size: 11pt;
-$large-font-size: 14pt;
 $h6-font-size: 12pt;
 $h5-font-size: 14pt;
 $h4-font-size: 17pt;

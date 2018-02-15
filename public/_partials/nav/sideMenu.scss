@@ -8,6 +8,7 @@ nav.sideMenu {
   header { 
     background-color: map-get($colors,lightestgray);
     border-bottom: 1pt solid map-get($colors,lightgray);
+    height: map-get($app-dimensions, detail-header-height);
     
     & > * {
       padding: 12pt;
@@ -44,7 +45,7 @@ nav.sideMenu {
     overflow: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    height:100%;
+    height:calc(100% - #{map-get($app-dimensions, detail-header-height)});
     
     li {
       border-bottom: 1pt solid map-get($colors,lightgray);
