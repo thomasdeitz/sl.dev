@@ -1,119 +1,19 @@
 (function () {
-  var networks = [
-    'facebookAuth',
-    'twitterAuth',
-    'linkedinAuth'
-  ]
-
   $(document).ready(function () {
-
+    networks = ['facebookAuth', 'twitterAuth', 'linkedinAuth'];
+    
+    // Checks for connections and redirects user appropriately
     if (!Cookies.get('facebookAuth') && !Cookies.get('twitterAuth') && !Cookies.get('linkedinAuth')) {
       if (window.location.pathname.split("/").slice(-1) != "preferences" && window.location.pathname.split("/").slice(-1) != "authenicating" && window.location.pathname.split("/").slice(-1) != "") {
         window.location.href = "./preferences/";
-        console.log(window.location.pathname)
+        console.log(window.location.pathname);
       }
     }
 
-    // match networks and connectedness
-    function networkConnected(network) {
-      var connected = Cookies.get(network);
-      if (connected == 1) {
-        $('#preferencesDetail li#' + network).addClass('connected');
-      } else {
-        console.log(network + ' not Connected :(');
-      }
-    }
-
-    $('#preferencesDetail button').click(function (e) {
-      Cookies.set(e.target.getAttribute('data-network'), '1', { expires: 7 });
-      window.location.href = "./authenticating";
-    });
-
-    for (network in networks) {
-      console.log(networks, networks[network])
-      networkConnected(networks[network]);
-    }
-
-    // Tab stuff
-    var categoryList = $('#categoryMenu li');
-    var tabList = $('#categoryMenu li');
-    var leadsList = $('.leadsList');
-    var leadMenu = $('#leadMenu li');
-
-
     
-    // Newish
-    $("a[href='#categories']").on("click", function (e) {
-      e.preventDefault();
-      $("body").addClass("show-categories");
-    });
-    
-    $("#categoryMenu a").on("click", function (e) {
-      e.preventDefault();
-      $("body").removeClass("show-categories");
-    });
-    
-    $("#leadMenu li").click(function () {
-      selectLead(this);
-      $('body').removeClass('view-tabs');
-      $('body').addClass('show-lead-detail');
-    });
-    
-    $(categoryList).click(function (e) {
-      e.preventDefault();
-      //$('body').removeClass('view-tabs');
-      selectTab(this);
-    });
-    
-    function selectLead(lead) {
-      var lead = lead;
-      var target = $(lead).attr("slug-target");
+/*
 
-      $(lead).siblings().removeClass('active')
-      $(lead).addClass('active');
-      $('body').removeClass('tile-detail');
-      $('body').removeClass('init-lead-detail');
-      $('div[class*="-expanded"]').removeClass('active-tile');
-
-      $(lead).parents("aside").siblings('.leadDetail').find('> div').each(function () {
-        var detail = $(this);
-
-        if (detail.attr('slug') == target) {
-          $(detail).addClass('visible');
-        } else {
-          $(detail).removeClass('visible');
-        }
-      });
-    }
-    
-    function selectTab(category) {
-      var category = category || $(categoryList)[0];
-      var target = $(category).find('a').attr("tab-cat-target");
-
-      $(category).siblings().removeClass('active')
-      $(category).addClass('active');
-
-      $(leadMenu).each(function () {
-        var categoryTarget = $(this);
-        $('body').removeClass('tile-detail');
-        $('div[class*="-expanded"]').removeClass('active-tile');
-
-        if (target == 0) {
-          $(leadMenu).show();
-        }else if (categoryTarget.attr('tab-cat') == target) {
-          $(categoryTarget).show();
-        } else {
-          $(categoryTarget).hide();
-        }
-      });
-    }
-    
-    // newish end
-    
-
-    selectTab(); //document load
-
-    $(leadsList).each(function () {
+    /*$(leadsList).each(function () {
       var initLead = $(this).find('li')[0];
       selectLead(initLead);
       setTimeout(function () {

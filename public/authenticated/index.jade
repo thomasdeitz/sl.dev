@@ -1,10 +1,84 @@
 //- authenticated/index.jade
 
-//!= partial("./_shared/nav.main")
+- var categoryMenuParams = { id: "categoryMenu", header: "Categories", listItemTemplate: "category", list: tabs };
+- var leadMenuParams = { id: "leadMenu", backLabel: "Categories", backHref: "#categories", header: "All Leads", listItemTemplate: "lead", list: leads };
 
 main.authenticated
   aside
-    != partial("../_partials/nav/sideMenu", { id: "categoryMenu", header: "Categories", listItemTemplate: "category", list: tabs })
-    != partial("../_partials/nav/sideMenu", { id: "leadMenu", backLabel: "Categories", backHref: "#categories", header: "All Leads", listItemTemplate: "lead", list: leads })
+    != partial("../_partials/nav/sideMenu", categoryMenuParams)
+    != partial("../_partials/nav/sideMenu", leadMenuParams)
 
   != partial("../_partials/lead/detail")
+  
+script.
+  (function () {
+    $(document).ready(function () {
+  
+      // Tab stuff
+      var categoryMenuItems = $('#categoryMenu .menu-list li');
+      var leadMenuItems = $('#leadMenu .menu-list li');
+      
+      // Loads first category in list on page load
+      selectCategory();
+      
+      // Loads first lead in list on page load
+      selectLead();
+
+      // Adds show-categories class to support showing categoryMenu when a categories nav is clicked
+      $("a[href='#categories']").on("click", function (e) {
+        e.preventDefault();
+        $("body").addClass("show-categories");
+      });
+      
+      // Click event to call selectLead() to select a specific lead
+      $(leadMenuItems).click(function () {
+        selectLead(this);
+        //$('body').removeClass('view-tabs');
+        //$('body').addClass('show-lead-detail');
+      });
+      
+      // Click event to call selectCategory() to select a specific category
+      $(categoryMenuItems).click(function (e) {
+        selectCategory(this);
+        //$('body').removeClass('view-tabs');
+      });
+      
+      function selectLead(lead) {
+        var lead = lead || $(leadMenuItems).first();
+        var leadLink = $(lead).children('a');
+        var target = $(leadLink).attr("href").split('').slice(1).join('');
+        var leadDetails = $('.leadDetail').children();
+        var thisLeadDetail = $(leadDetails).filter('[data-lead="' + target + '"]');
+        
+        console.log(lead, leadLink, target, leadDetails, thisLeadDetail);
+  
+        $(leadMenuItems).removeClass('active') // Resets active class on leads
+        $(lead).addClass('active'); // Adds active class on to this lead
+        
+        $('body').removeClass('init-lead-detail'); // Resets inital lead detail view from page load
+        $('body').removeClass('tile-detail'); // Resets body class that supports showing active lead detail tile
+        $('div[class*="-expanded"]').removeClass('active-tile'); // Resets active lead detail tile
+        
+        $(leadDetails).removeClass('visible'); // Resets leadDetails
+        $(thisLeadDetail).addClass('visible'); // Sets activeleadDetail
+      }
+      
+      function selectCategory(category) {
+        var category = category || $(categoryMenuItems).first();
+        var categoryLink = $(category).children('a');
+        var target = $(categoryLink).attr('href').split('').slice(1).join('');
+  
+        $(categoryMenuItems).removeClass('active');
+        $(category).addClass('active');
+  
+        $(leadMenuItems).hide();
+        $(leadMenuItems).filter('[data-category=' + target + ']').show();
+
+        $("body").removeClass("show-categories");
+        
+        if (target == 0) {
+          $(leadMenuItems).show();
+        }
+      }
+    });
+  })();

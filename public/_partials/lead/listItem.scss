@@ -17,5 +17,9 @@
      .name {
        font-weight: bold;
      }
+     .score {
+       float: right;
+       color: map-get($colors,primary);
+     }
   }
 }

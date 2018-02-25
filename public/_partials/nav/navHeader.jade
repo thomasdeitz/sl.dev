@@ -1,0 +1,17 @@
+//- nav/NavHeader.jade
+
+div.nav-header
+  if backLabel && backHref
+    a(href="#{ backHref }")= backLabel
+  else
+    div
+
+  figure
+    != partial("../brand/logoMark")
+
+  figure
+    span.fa.fa-user-circle
+  nav
+    ul
+      li Preferences
+      li Sign Out

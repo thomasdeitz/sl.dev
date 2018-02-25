@@ -2,8 +2,7 @@
 
 nav(id="#{ id }").sideMenu
   header
-    if backLabel && backHref
-      a(href="#{ backHref }")= backLabel
+    != partial("navHeader")
     h3= header
   ul.menu-list
     for listItem in list

@@ -1,13 +1,15 @@
+//- category/listItem.jade
+
 li.category-list-item
-  a(href="/articles/#{ item.url }" tab-cat-target="#{ item.url }")
+  a(href="##{ item.url }")
     span(class= item.icon )
     span= item.label
     if item.url == "0"
-      span= leads.length
+      span.leadAmount= leads.length
     else
-      span= leads.filter(lead => lead.tab == item.url).length
+      span.leadAmount= leads.filter(lead => lead.tab == item.url).length
 
-// typeof item = object
-// typeof item.url = string
-// typeof item.icon = string
-// typeof item.label = string
+//- typeof item = object
+//- typeof item.url = string
+//- typeof item.icon = string
+//- typeof item.label = string

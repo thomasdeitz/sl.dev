@@ -2,12 +2,11 @@
 
 section.leadDetail(style="position:relative;")
   for lead in leads
-    div(slug="#{lead.slug}")
+    div(data-lead="#{lead.slug}")
       != partial("./detail.header", { lead: lead })
   
-      section
+      section.tiles
         div
-  
           != partial("../tile/personal", {title: "Personal Insights", target: "personal"})
           
           != partial("../tile/activity", {title: "Social Activity", target: "activity"})
@@ -31,3 +30,26 @@ section.leadDetail(style="position:relative;")
       != partial("../expanded/products", {title: "Product Suggestions", target: "products"})
         
       != partial("../expanded/employment", {title: "Employment", target: "employment"})
+
+script.
+  (function () {
+    $(document).ready(function () {
+      
+      var tileList = $(".tile");
+      
+      $(tileList).click(function (e) {
+        var target = $(this).attr('href').split('').slice(1).join('');
+        var expandedTileList = $(this).parent().parent('section').siblings('.expanded');
+        var expandedTile = $(expandedTileList).filter('[data-tile="' + target +'"]');
+
+        $(expandedTileList).removeClass('active');
+        $(expandedTile).addClass('active');
+        $('body').addClass('show-tile-detail');
+      });
+    
+      $(".expanded .fa-times-circle").click(function (e) {
+        $('.expanded').removeClass('active');
+        $('body').removeClass('show-tile-detail');
+      });
+    });
+  })();

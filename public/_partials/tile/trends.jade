@@ -4,6 +4,6 @@ extends ./tile.jade
 
 block content
   for trend in leads[0].st.slice(0, 4)
-    a(class="trend #{ trend.type }")
+    span(class="trend #{ trend.type }")
       span(class="fa fa-#{ trend.type }")
       span= trend.label

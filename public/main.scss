@@ -7,6 +7,7 @@
 
 // Partials
 @import '_partials/nav/sideMenu';
+@import '_partials/nav/navHeader';
 
 @import '_partials/category/listItem';
 
@@ -15,6 +16,8 @@
 @import '_partials/lead/detail.header';
 
 @import '_partials/tile/tile';
+
+@import '_partials/expanded/expanded';
 
 @import '_partials/preferences/networks';
 

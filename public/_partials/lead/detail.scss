@@ -3,15 +3,22 @@
 .leadDetail {
   & > div {
     display:none;
+    
     &.visible {
       display:block;
     }
-    section {
-      position:relative; //
-      height: 500px; //
-      overflow:hidden; //
-      overflow-y: scroll; //
-      & > div { //
+
+    section.tiles {
+      position:absolute;
+      height: calc(100% - #{map-get($app-dimensions, detail-header-height)});
+      overflow:hidden;
+      overflow-y: scroll;
+      
+      .show-tile-detail & {
+        display:none;
+      }
+      
+      & > div {
         display:flex;
         flex-wrap: wrap;
       }

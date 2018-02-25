@@ -1,0 +1,7 @@
+.expanded {
+  display:none;
+  
+  &.active {
+    display:block;
+  }
+}

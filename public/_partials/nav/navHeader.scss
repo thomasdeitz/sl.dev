@@ -1,0 +1,54 @@
+div.nav-header {
+  display: flex;
+  width: 100%;
+  
+  & > * {
+    padding: 12pt;
+    margin:0px;
+    width: 33%;
+    flex-grow: 1;
+  }
+  
+  a {
+    position:relative;
+    display: inline-block;
+    text-decoration: none;
+    color: map-get($colors, primary);
+    
+    &:before {
+      content:'';
+      display:block;
+      position:absolute;
+      top:50%;
+      transform-origin:center center;
+      transform: translate(-70%, -50%) rotate(45deg);
+      border: 1pt solid map-get($colors,primary);
+      border-right-color: transparent;
+      border-top-color: transparent;
+      height: $base-font-size/2;
+      width: $base-font-size/2;
+    }
+  }
+  
+  > figure { 
+    height: 100%;
+    text-align: center;
+    
+    &:last-of-type {
+      text-align: right;
+      color: map-get($colors, primary);
+    }
+    
+    svg {
+      height: map-get($app-dimensions, base-padding);
+      width: auto;
+      
+      .st0 { fill: map-get($colors, secondary); }
+    }
+  }
+  
+  nav {
+    position: absolute;
+    display: none;
+  }
+}

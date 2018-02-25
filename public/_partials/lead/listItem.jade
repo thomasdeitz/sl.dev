@@ -1,11 +1,11 @@
 //- listItem.jade
 
-li(tab-cat="#{ item.tab }" slug-target="#{ item.slug }").lead-list-item
-  a
+li(data-category="#{ item.tab }").lead-list-item
+  a(href="##{ item.slug }")
     figure(style="background-image:url(#{ item.img })")
     div
       span.name= item.name
-      span(style="float:right; color:#46a0c7;")
+      span.score
         span= item.value
         span %
       br

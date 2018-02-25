@@ -10,30 +10,8 @@ nav.sideMenu {
     border-bottom: 1pt solid map-get($colors,lightgray);
     height: map-get($app-dimensions, detail-header-height);
     
-    & > * {
-      padding: 12pt;
-      margin:0px;
-    }
-    
-    a {
-      position:relative;
-      display: inline-block;
-      text-decoration: none;
-      color: map-get($colors, primary);
-      
-      &:before {
-        content:'';
-        display:block;
-        position:absolute;
-        top:50%;
-        transform-origin:center center;
-        transform: translate(-70%, -50%) rotate(45deg);
-        border: 1pt solid map-get($colors,primary);
-        border-right-color: transparent;
-        border-top-color: transparent;
-        height: $base-font-size/2;
-        width: $base-font-size/2;
-      }
+    h3 {
+      padding: 0 map-get($app-dimensions, base-padding);
     }
   }
   
@@ -64,7 +42,13 @@ nav.sideMenu {
           overflow: hidden;
         }
       }
-      &.active { background-color:map-get($colors,primary); a { color:white; }}
+      &.active { 
+        background-color:map-get($colors,primary); 
+        
+        a, * { 
+          color: map-get($colors, white); 
+        }
+      }
     }
   }
 }

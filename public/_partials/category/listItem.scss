@@ -2,11 +2,28 @@
 
 .sideMenu {
   li.category-list-item {
-    a { padding-left: 36pt; }
-    .fa {
-      position: absolute;
-      top: 12pt;
-      left: 12pt;
-    } 
+    a { 
+      padding-left: 36pt;
+      
+      .fa {
+        position: absolute;
+        top: 12pt;
+        left: 12pt;
+      }
+      
+      .leadAmount {
+        position:absolute;
+        top: map-get($app-dimensions, base-padding);
+        right: map-get($app-dimensions, base-padding);
+        background-color: map-get($colors, primary);
+        text-align: center;
+        height: 50%; //map-fetch($font, items p);
+        border-radius: 12pt; //map-fetch($font, items p)/2;
+        min-width: 24pt;
+        font-size: map-fetch($font, items small);
+        color: map-get($colors, white);
+        padding: 4px;
+      }
+    }
   }
 }
