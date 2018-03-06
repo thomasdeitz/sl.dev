@@ -93,7 +93,9 @@ button {
       opacity:1;
     
       .success {
-        display: inline-block;
+        display: block;
+        white-space: nowrap;
+        overflow:hidden;
       }
       
       button {
