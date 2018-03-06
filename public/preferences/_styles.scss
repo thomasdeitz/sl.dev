@@ -1,0 +1,15 @@
+main.preferences {
+  top:0px; height:100%;
+  
+  aside {
+    width: 320pt;
+    position:relative;
+    flex-shrink: 0;
+    border-right: 1pt solid map-get($colors,lightgray);
+  }
+
+  section {
+    background: map-get($colors, lightgray);
+    flex-grow:1;
+  }
+}

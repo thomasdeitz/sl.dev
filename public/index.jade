@@ -1,3 +1,39 @@
 //- index.jade
 
-!= partial("./_shared/marquee")
+section.marquee
+  figure.image(style="background-image:url(#{ marquee_image });")
+  != partial("./_partials//brand/logo")
+  div.modal-container
+    div#signIn.modal
+      div#ssoPanel.active
+        != partial("./_partials/brand/logo.nm")
+
+        h4 Sign In
+
+        ul#ssoAccounts
+          for account in user.accounts
+            li
+              a(href="./authenticated")
+                small= account
+
+      div#connectPanel
+        span.spinner
+        p Connecting...
+
+  script.
+    (function () {
+      $(document).ready(function () {
+        
+        $('#signIn #ssoAccounts a').click(function (e) {
+          var target = $(e.currentTarget).attr('href');
+          
+          e.preventDefault();
+          
+          $('#signIn').addClass('connecting');
+          
+          setTimeout(function () {
+            window.location.href = target;
+          }, 1000);
+        });
+      });
+    })();

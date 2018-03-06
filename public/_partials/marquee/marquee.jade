@@ -1,0 +1,69 @@
+section.marquee
+  figure.image(style="background-image:url(#{ marquee_image });")
+  != partial("../brand/logo")
+  div.modal-container
+    div#signIn.modal
+      div#ssoPanel
+        != partial("../brand/logo.nm")
+
+        h4 Sign In
+
+        ul
+          for account in user.accounts
+            li
+              a(href="./authenticated")
+                small= account
+
+      div#connectPanel
+        h2 Get Connected
+
+        for network in networks
+          input(id="#{ network.icon }" type="radio" name="connetTab" checked=network.checked=="checked" )
+            label(for="#{ network.icon }" style="border-color:#{ network.color }")
+            span(class="fa #{ network.icon }" style="color: #{ network.color }")
+            span= network.label
+
+        ul.connectTabs
+          for network in networks
+            li.connect
+              span(class="fa #{ network.icon }" style="color: #{ network.color }")
+              div.connect
+                form
+                  input(type="email" placeholder="Username")
+                  input(type="password" placeholder="Password")
+                  button(style="background-color:#{ network.color }") Connect
+              div.connecting
+                span.spinner(style="border-color: #{ network.color }; border-bottom-color:transparent;")
+                span Connecting...
+
+              div.connected
+                span Connected
+
+  script.
+    (function () {
+      $(document).ready(function () {
+        
+        $('.connectTabs button').click(function (e) {
+          e.preventDefault();
+          var target = $(this).parents('li');
+          
+          $(target).removeClass('connect').addClass('connecting');
+          setTimeout(function () {
+            $(target).removeClass('connecting').addClass('connected');
+          }, 2000);
+          
+          var step = $(this).closest('li').closest('li');
+    
+          if (step.is(':last-child')) {
+            setTimeout(function () {
+              window.location.href = "./authenticated";
+            }, 3000);
+          } else {
+            setTimeout(function () {
+              var next = $('input[type="radio"]:checked').nextAll('input[type="radio"]')[0];
+              $(next).attr('checked', true);
+            }, 3000);
+          }
+        });
+      });
+    })();

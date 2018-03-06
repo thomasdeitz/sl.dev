@@ -52,7 +52,7 @@ button {
     width: calc(33% - 24pt);
     margin: 12pt;
     padding: 24pt;
-    background-color: white;
+    background-color: map-get($colors,white);
     height: auto;
     position: relative;
     overflow: hidden;
