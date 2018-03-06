@@ -2,7 +2,7 @@
 
 section.marquee
   figure.image(style="background-image:url(#{ marquee_image });")
-  != partial("./_partials//brand/logo")
+  != partial("./_partials/brand/logo")
   div.modal-container
     div#signIn.modal
       div#ssoPanel.active
@@ -13,7 +13,7 @@ section.marquee
         ul#ssoAccounts
           for account in user.accounts
             li
-              a(href="./authenticated")
+              a(href="{{uri}}/authenticated")
                 small= account
 
       div#connectPanel

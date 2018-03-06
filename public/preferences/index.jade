@@ -29,7 +29,7 @@ main.preferences
         // Forwards to connecting page, adds cookie once connected to a network to mock connectedness
         $('#preferencesDetail button').click(function (e) {
           Cookies.set(e.target.getAttribute('data-network'), '1', { expires: 7 });
-          window.location.href = "./authenticating";
+          window.location.href = "{{uri}}/authenticating";
         });
       });
     })();
