@@ -1,9 +1,10 @@
-//- trends.jade
+//- _partials/tile/trends.jade
 
 extends ./tile.jade
 
 block content
-  for trend in leads[0].st.slice(0, 4)
-    span(class="trend #{ trend.type }")
-      span(class="fa fa-#{ trend.type }")
-      span= trend.label
+  div#trendsTile
+    for trend in leads[0].st.slice(0, 4)
+      small(class="trend #{ trend.type }")
+        span(class="fa fa-#{ trend.type }")
+        span= trend.label

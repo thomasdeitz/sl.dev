@@ -1,0 +1,26 @@
+#employmentTile {
+  .job {
+    position:relative;
+    display:block;
+    background-color: mix(map-get($colors, secondary), map-get($colors, white), 20);
+    padding: map-get($app-dimensions, base-padding);
+    padding-left:map-get($app-dimensions, list-figure-size) + (map-get($app-dimensions, base-padding) * 2);
+    color: map-get($colors, secondary);
+    margin-bottom: map-get($app-dimensions, base-padding);
+    
+    figure {
+      position: absolute;
+      left: map-get($app-dimensions, base-padding);
+      margin: 0px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center center;
+      height: map-get($app-dimensions, list-figure-size);
+      width: map-get($app-dimensions, list-figure-size);
+    }
+    
+    * {
+      display:block;
+    }
+  }
+}

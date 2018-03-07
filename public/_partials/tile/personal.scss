@@ -1,0 +1,21 @@
+#personalTile {
+  .personal {
+    display:block;
+    position:relative;
+    margin-bottom: map-get($app-dimensions, base-padding);
+    padding-left: map-get($app-dimensions, base-padding)*2.5;
+    
+    span:first-child {
+      position:absolute;
+      left: map-get($app-dimensions, base-padding);
+      
+      &.fa-check {
+        color: map-get($colors, success);
+      }
+      
+      &.fa-close {
+        color: map-get($colors, error);
+      }
+    }
+  }
+}

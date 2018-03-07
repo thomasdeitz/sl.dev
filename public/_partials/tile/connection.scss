@@ -1,0 +1,12 @@
+#connectionTile {
+  display:block;
+  padding: map-get($app-dimensions, base-padding);
+  margin-bottom: map-get($app-dimensions, base-padding);
+  text-align: center;
+  
+  h1 {
+    margin:0px;
+    padding:0px;
+    color: map-get($colors, primary);
+  }
+}

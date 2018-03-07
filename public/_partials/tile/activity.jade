@@ -3,18 +3,19 @@
 extends ./tile.jade
 
 block content
-  span.facebook
-    span.fa.fa-facebook-square
-    span= leads[0].sa_fb_message
-  
-  span.twitter
-    span.fa.fa-twitter-square
-    span= leads[0].sa_tr_message
-  
-  span.linkedin
-    span.fa.fa-linkedin-square
-    span= leads[0].sa_ln_message
-  
-  span.windows
-    span.fa.fa-windows
-    span= leads[0].sa_ds_message
+  div#activityTile
+    small.facebook(style="background-color: #{ networks[0].color}")
+      span.fa.fa-facebook-square
+      span= leads[0].sa_fb_message
+    
+    small.twitter(style="background-color: #{ networks[1].color}")
+      span.fa.fa-twitter-square
+      span= leads[0].sa_tr_message
+    
+    small.linkedin(style="background-color: #{ networks[2].color}")
+      span.fa.fa-linkedin-square
+      span= leads[0].sa_ln_message
+    
+    small.windows
+      span.fa.fa-windows
+      span= leads[0].sa_ds_message

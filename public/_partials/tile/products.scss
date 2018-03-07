@@ -1,0 +1,14 @@
+#productsTile {
+  .product {
+    display:block;
+    background-color: map-get($colors, primary);
+    padding: map-get($app-dimensions, base-padding);
+    color: map-get($colors, white);
+    text-align:center;
+    margin-bottom: map-get($app-dimensions, base-padding);
+    
+    &:last-child {
+      background-color: map-get($colors, black);
+    }
+  }
+}

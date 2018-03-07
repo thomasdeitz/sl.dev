@@ -1,0 +1,9 @@
+#trendsTile {
+  .trend {
+    display:block;
+    background-color: mix(map-get($colors, secondary), map-get($colors, white), 20);
+    padding: map-get($app-dimensions, base-padding);
+    color: map-get($colors, secondary);
+    margin-bottom: map-get($app-dimensions, base-padding);
+  }
+}

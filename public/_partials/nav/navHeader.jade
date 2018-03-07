@@ -10,8 +10,8 @@ div.nav-header
     != partial("../brand/logoMark")
 
   figure
-    label(for="mt1").fa.fa-user-circle
     if showMenu
+      label(for="mt1").fa.fa-user-circle
       input(id="mt1" value="mt1" name="open" type="checkbox")
       nav
         ul

@@ -4,6 +4,7 @@
     padding:12pt;
     display:flex;
     height:84pt;
+    border-bottom: 1pt solid map-get($colors, lightgray);
     
     figure {
       margin:0px;

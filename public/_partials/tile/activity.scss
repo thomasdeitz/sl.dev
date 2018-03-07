@@ -1,0 +1,13 @@
+#activityTile {
+  text-align:center;
+  > small {
+    color:map-get($colors, white);
+    padding: map-get($app-dimensions, base-padding);
+    background-color: map-get($colors, black);
+    margin-bottom: map-get($app-dimensions, base-padding);
+    display:block;
+    > span:first-child {
+      margin-right: map-get($app-dimensions, base-padding)/2;
+    }
+  }
+}

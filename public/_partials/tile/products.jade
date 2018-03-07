@@ -3,6 +3,7 @@
 extends ./tile.jade
 
 block content
-  for product in leads[0].product_suggestions
-    span(class="product #{ product.split(' ').join('_').toLowerCase() }")
-      span= product
+  div#productsTile
+    for product in leads[0].product_suggestions
+      strong(class="product #{ product.split(' ').join('_').toLowerCase() }")
+        span= product
