@@ -1,0 +1,70 @@
+#personalExpanded {
+  display:flex;
+	justify-content: center;
+	text-align: left;
+	flex-wrap: wrap;
+	p.personal {
+		span:first-child {
+			color: map-get($colors, success);
+			margin-right: $base-padding/2;
+			
+			&.fa-close {
+				color: map-get($colors, error);
+			}
+		}
+	}
+	
+	& > div {
+		display:flex;
+		justify-content: center;
+		text-align: left;
+		flex-wrap: wrap;
+		
+		> div {
+			margin: $base-padding;
+			flex-grow:1;
+			min-width:200px;
+			
+			&:nth-child(1) .g > div { background-color: map-get($colors, primary); }
+			&:nth-child(2) .g > div { background-color: map-get($colors, secondary); }
+			&:nth-child(3) .g > div { background-color: #00BBFF; }
+			
+			.dp {
+				margin-bottom: $base-padding;
+				.d {
+					display:flex;
+					span:first-of-type { flex-grow:1; }
+					
+					span:last-of-type {
+						font-weight:700;
+						float:left;
+					}
+				}
+				
+				.g {
+					width:100%;
+					height:$base-padding/1.5;
+					margin:$base-padding/3 0;
+					padding:2px;
+					background-color: map-get($colors, lightgray);
+					
+					& > div {
+						height:100%;
+						
+						.tile-detail & {
+							animation-delay: .2s;
+							animation-duration: 1s;
+							animation-name: grow;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+  @keyframes grow {
+    from {
+      width:0%;
+    }
+  }

@@ -3,14 +3,29 @@
 extends ./expanded.jade
 
 block content
-  for insight in leads[0].personal.pro
-    p.personal
-      span.fa.fa-check
-      span= insight
+  div#personalExpanded
+    div.pro
+      for insight in leads[0].personal.pro
+        p.personal
+          span.fa.fa-check
+          span= insight
+
+    div.con
+      for insight in leads[0].personal.con
+        p.personal
+          span.fa.fa-close
+          span= insight
+    hr
+    
+    div.chart
+      for section in leads[0].personal.sections
+        div.ps
+          h6= section.label
   
-  hr
-  
-  for insight in leads[0].personal.con
-    p.personal
-      span.fa.fa-close
-      span= insight
+          for dataPoint in section.data
+            div.dp
+              div.d
+              span #{dataPoint.label}&nbsp;
+                span #{ dataPoint.value }%
+              div.g
+                div(style="width:#{ dataPoint.value }%")

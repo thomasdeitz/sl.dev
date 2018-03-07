@@ -1,7 +1,41 @@
 .expanded {
   display:none;
+  position:relative;
+  background-color: map-get($colors, white);
+  padding: map-get($app-dimensions, base-padding);
+  margin:  map-get($app-dimensions, base-padding);
   
   &.active {
     display:block;
   }
+  
+  h5 {
+    color: map-get($colors, primary);
+    padding-bottom: map-get($app-dimensions, base-padding);
+    border-bottom: 1pt solid map-get($colors, lightgray);
+    margin: 0;
+    margin-bottom: map-get($app-dimensions, base-padding);
+  }
+  
+  hr {
+    width:100%;
+    border:none;
+    border-bottom: 1pt solid map-get($colors, lightgray);
+    margin: map-get($app-dimensions, base-padding) 0;
+  }
+  
+  span.close-expanded {
+    position:absolute;
+    top: 0;
+    right: 0;
+    color: map-get($colors, gray);
+    padding:map-get($app-dimensions, base-padding);
+    cursor: pointer;
+    
+    &:hover {
+      color: map-get($colors, black);
+    }
+  }
 }
+
+@import './personal';

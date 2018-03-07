@@ -1,6 +1,8 @@
 //- _partials/lead/detail.scss
 
 .leadDetail {
+  overflow: hidden;
+  overflow-y: scroll;
   & > div {
     display:none;
     
