@@ -2,7 +2,7 @@
 
 div.nav-header
   if backLabel && backHref
-    a(href="#{ backHref }")= backLabel
+    a.back(href="#{ backHref }")= backLabel
   else
     div
 
@@ -10,8 +10,16 @@ div.nav-header
     != partial("../brand/logoMark")
 
   figure
-    span.fa.fa-user-circle
-  nav
-    ul
-      li Preferences
-      li Sign Out
+    label(for="mt1").fa.fa-user-circle
+    if showMenu
+      input(id="mt1" value="mt1" name="open" type="checkbox")
+      nav
+        ul
+          li 
+            a(href="#{uri}/preferences") Preferences
+          li 
+            a(href="#{uri}/") Sign Out
+
+//- typeof backHref = string
+//- typeof backLabel = string
+//- typeof showMenu = bool

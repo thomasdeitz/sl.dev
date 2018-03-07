@@ -9,7 +9,7 @@ div.nav-header {
     flex-grow: 1;
   }
   
-  a {
+  a.back {
     position:relative;
     display: inline-block;
     text-decoration: none;
@@ -47,8 +47,36 @@ div.nav-header {
     }
   }
   
+  input {
+    display: none;
+  }
+  
   nav {
     position: absolute;
+    display:block;
+    background-color: map-get($colors, white);
+    right:0px;
+    border: 1px solid map-get($colors, lightgray);
+    z-index: 1000;
+    text-align: center;
     display: none;
+    li {
+      border: none;
+      &:not(:last-child) { 
+        border-bottom: 1px solid map-get($colors, lightgray)
+        
+      }
+      a {
+        color: map-get($colors, primary);
+        padding: map-get($app-dimensions, base-padding)  map-get($app-dimensions, base-padding)*2;
+      
+        &:hover {
+          background-color: map-get($colors, lightgray);
+        }
+      }
+    }
+  }
+  input:checked + nav {
+    display:block;
   }
 }
